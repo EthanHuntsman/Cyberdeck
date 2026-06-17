@@ -1,0 +1,1011 @@
+[
+  {
+    "sellable": true,
+    "cardId": "CORE-A-000",
+    "name": "V",
+    "subName": "STREETKID",
+    "color": "Red",
+    "type": "Legend",
+    "cost": 5,
+    "power": 6,
+    "ram": 2,
+    "tags": [ "merc" ],
+    "keywords": [ "call", "go solo" ],
+    "cardText": "CALL: Trash 3. Then, add 1 BRAINDANCE Program from your trash to your hand.\n\nGO SOLO: (Pay this Legend's cost to play it as a ready Unit. It can attack this turn. If it leaves the field, remove it from the game.)",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/v_streetkid.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-002",
+    "name": "ROYCE",
+    "subName": "PSYCHO ON THE EDGE",
+    "color": "Red",
+    "type": "Legend",
+    "cost": 6,
+    "power": 6,
+    "ram": 2,
+    "tags": [ "ganger", "maelstrom" ],
+    "keywords": [ "go solo" ],
+    "cardText": "GO SOLO: (Pay this Legend's cost to play it as a ready Unit. It can attack this turn. If it leaves the field, remove it from the game.)\n\nDuring your turn, this Legend has +2 power for each of its equipped Gear.",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/royce_psycho.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-003",
+    "name": "ADAM SMASHER",
+    "subName": "ENDER OF LEGENDS",
+    "color": "Red",
+    "type": "Legend",
+    "cost": 9,
+    "power": 9,
+    "ram": 9,
+    "tags": [ "arasaka", "merc" ],
+    "keywords": [ "go solo", "play" ],
+    "cardText": "GO SOLO: (Pay this Legend's cost to play it as a ready Unit. It can attack this turn. If it leaves the field, remove it from the game.)\n\nPLAY: Defeat a rival Unit.",
+    "rarity": "EpicRare",
+    "imagePath": "Assets/Cards/adam_smasher_ender.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-004",
+    "name": "YORINOBU ARASAKA",
+    "subName": "EMBRACING DESTRUCTION",
+    "color": "Red",
+    "type": "Legend",
+    "power": 0,
+    "ram": 2,
+    "tags": [ "arasaka", "corpo" ],
+    "keywords": [],
+    "cardText": "The first time a friendly ARASAKA Unit attacks each turn, draw 1. Then, if you have less than 20 ☆ (Street Cred), discard 1.",
+    "rarity": "EpicRare",
+    "imagePath": "Assets/Cards/yorinobu_embracing.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-005",
+    "name": "SWORDWISE HUSCLE",
+    "color": "Red",
+    "type": "Unit",
+    "cost": 3,
+    "power": 3,
+    "ram": 2,
+    "tags": [ "merc" ],
+    "keywords": [ "attack" ],
+    "cardText": "ATTACK: If this Unit has power 5+, draw 1.",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/swordwise.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-006",
+    "name": "KERRY EURODYNE",
+    "subName": "THE LAST ROCKERBOY",
+    "color": "Red",
+    "type": "Unit",
+    "cost": 4,
+    "power": 5,
+    "ram": 1,
+    "tags": [ "rocker", "samurai" ],
+    "keywords": [],
+    "cardText": "Spend: If you control a Gig with 8+ value, draw 2.",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/kerry.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-007",
+    "name": "MEREDITH STOUT",
+    "subName": "STONE COLD CORPO",
+    "color": "Red",
+    "type": "Unit",
+    "cost": 4,
+    "power": 5,
+    "ram": 1,
+    "tags": [ "corpo", "militech" ],
+    "keywords": [ "blocker" ],
+    "cardText": "BLOCKER\n\nThis Unit has +2 power while fighting a Legend.\n\nWhen a Rival adjusts or swaps 1 or more friendly Gigs, you may add a card from your trash to your hand.",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/meredith.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-008",
+    "name": "EL SOMBRERON",
+    "subName": "LA VENGANZA LENTA",
+    "color": "Red",
+    "type": "Unit",
+    "cost": 5,
+    "power": 4,
+    "ram": 4,
+    "tags": [ "ganger", "valentino" ],
+    "keywords": [ "ATTACK" ],
+    "cardText": "ATTACK: You may pay 2 €$. If you do, this Unit gains power equal to a friendly max Gig this turn.",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/el_sombreron.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-009",
+    "name": "ROYCE",
+    "subName": "DON'T CALL ME SIMON",
+    "color": "Red",
+    "type": "Unit",
+    "cost": 5,
+    "power": 4,
+    "ram": 2,
+    "tags": [ "ganger", "maelstrom" ],
+    "keywords": [ "play" ],
+    "cardText": "PLAY: Defeat a rival Unit with power 2 or less. If you have more ☆ (Street Cred) than a Rival, defeat a rival Unit with power 3 or less instead.",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/royce_dont.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-010",
+    "name": "MINOTAUR",
+    "color": "Red",
+    "type": "Unit",
+    "cost": 7,
+    "power": 9,
+    "ram": 2,
+    "tags": [ "arasaka", "drone", "militech" ],
+    "keywords": [ "play" ],
+    "cardText": "PLAY: If you have more ☆ (Street Cred) than a Rival, defeat a rival Unit with power 5 or less.",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/minotaur.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-011",
+
+    "name": "MANTIS BLADES",
+    "color": "Red",
+    "type": "Gear",
+    "cost": 1,
+    "power": 2,
+    "ram": 1,
+    "tags": [ "cyberware" ],
+    "keywords": [],
+    "cardText": "(Equip to a friendly Unit or face-up Legend.)\n\n'One cut, one kill'",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/mantis_blades.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-012",
+
+    "name": "SATORI",
+    "subName": "SWORD OF SABURO",
+    "color": "Red",
+    "type": "Gear",
+    "cost": 2,
+    "power": 2,
+    "ram": 1,
+    "tags": [ "arasaka" ],
+    "keywords": [],
+    "cardText": "(Equip to a friendly Unit or face-up Legend.)\n\nWhen this Unit wins a fight against a rival Unit, draw 1.",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/satori.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-013",
+
+    "name": "ALL IS LOST",
+    "color": "Red",
+    "type": "Program",
+    "cost": 1,
+    "ram": 2,
+    "tags": [ "zetatech" ],
+    "keywords": [],
+    "cardText": "Trash 3. Add a Unit from among them to your hand.",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/all_is_lost.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-014",
+
+    "name": "CARNAGE AT THE COLOSSSEUM",
+    "color": "Red",
+    "type": "Program",
+    "cost": 6,
+    "ram": 3,
+    "tags": [ "braindance" ],
+    "keywords": [],
+    "cardText": "Play this Program for -1 €$ for each friendly Gig with 8+ value, to a minimum of 1 €$.\n\nDefeat a rival Unit with less power than a friendly Unit.",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/carnage.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-015",
+
+    "name": "DUM DUM",
+    "subName": "MAELSTROM TRIGGERMAN",
+    "color": "Yellow",
+    "type": "Legend",
+    "power": 0,
+    "ram": 2,
+    "tags": [ "ganger", "maelstrom" ],
+    "keywords": [ "call", "quick" ],
+    "cardText": "CALL: You may defeat a friendly Gear. If you do, draw 2. Otherwise, draw 1.\n\nQUICK: 1E$, Spend: Give a friendly Unit +1 power this turn for each of its equipped Gear.",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/dum_dum.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-016",
+
+    "name": "RIVER WARD",
+    "subName": "DETECTIVE ON THE HUNT",
+    "color": "Yellow",
+    "type": "Legend",
+    "power": 0,
+    "ram": 2,
+    "tags": [ "ncpd" ],
+    "keywords": [ "quick" ],
+    "cardText": "QUICK: Spend: Play a Gear with cost 2 or less from your hand for free.\n\nWhen a friendly equipped Unit is defeated, search the top 2 cards of your deck and trash 1.",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/river_ward_hunt.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-017",
+
+    "name": "VIKTOR VEKTOR",
+    "subName": "SIT DOWN AND RELAX",
+    "color": "Yellow",
+    "type": "Legend",
+    "power": 0,
+    "ram": 2,
+    "tags": [ "ripperdoc" ],
+    "keywords": [ "call" ],
+    "cardText": "CALL: Search the top 5 cards of your deck. Reveal up to 2 Gears with cost 2 or less and add them to your hand. Bottom-deck the rest in a random order.",
+    "rarity": "EpicRare",
+    "imagePath": "Assets/Cards/vik_vek_relax.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-018",
+
+    "name": "SECONDHAND BOMBUS",
+    "color": "Yellow",
+    "type": "Unit",
+    "cost": 2,
+    "power": 0,
+    "ram": 2,
+    "tags": [ "drone", "zetatech" ],
+    "keywords": [ "blocker" ],
+    "cardText": "BLOCKER: (You may spend this Unit to redirect a rival Unit's attack to it instead.)\n\n(Units with power 0 don't steal Gigs.)",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/bombus.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-019",
+
+    "name": "GILDED MATON",
+    "color": "Yellow",
+    "type": "Unit",
+    "cost": 4,
+    "power": 3,
+    "ram": 2,
+    "tags": [ "ganger", "valentino" ],
+    "keywords": [ "play" ],
+    "cardText": "PLAY: You may defeat a friendly Gear. If you do, defeat a rival Unit with cost 3 or less.",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/gilded_maton.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-020",
+
+    "name": "HANAKO ARASAKA",
+    "subName": "IN A GILDED CAGE",
+    "color": "Yellow",
+    "type": "Unit",
+    "cost": 4,
+    "power": 1,
+    "ram": 2,
+    "tags": [ "arasaka", "corpo", "netrunner" ],
+    "keywords": [ "play" ],
+    "cardText": "PLAY: Search the top 4 cards of your deck. Reveal any number of cards with cost equal to any friendly Gig values and add them to your hand. Bottom-deck the rest.",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/hanako_gilded.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-021",
+
+    "name": "OFFDUTY MALFINI",
+    "color": "Yellow",
+    "type": "Unit",
+    "cost": 4,
+    "power": 5,
+    "ram": 2,
+    "tags": [ "ganger", "voodoo boys" ],
+    "keywords": [ "play" ],
+    "cardText": "PLAY: Spend this Unit and a rival Unit.",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/offduty_malfini.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-022",
+
+    "name": "T-BUG",
+    "subName": "AMATEUR PHILOSOPHER",
+    "color": "Yellow",
+    "type": "Unit",
+    "cost": 4,
+    "power": 4,
+    "ram": 2,
+    "tags": [ "merc", "netrunner" ],
+    "keywords": [ "defeated" ],
+    "cardText": "DEFEATED: Look at all friendly face-down Legends. Then, you may Call a Legend for free. (You can only Call a Legend once per turn.)",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/t_bug_amateur.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-023",
+
+    "name": "CALIBER",
+    "subName": "TOTENTANZ'S TOP DOG",
+    "color": "Yellow",
+    "type": "Unit",
+    "cost": 5,
+    "power": 5,
+    "ram": 2,
+    "tags": [ "ganger", "maelstrom" ],
+    "keywords": [ "play", "defeated" ],
+    "cardText": "PLAY: Defeat a rival Unit with cost 2 or less.\n\nDEFEATED: A Rival discards 1. If the card's cost equals the value of a friendly Gig, that Rival discards 1 more.",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/caliber_dog.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-024",
+
+    "name": "JACKIE WELLES",
+    "subName": "RIDE OR DIE CHOOM",
+    "color": "Yellow",
+    "type": "Unit",
+    "cost": 6,
+    "power": 8,
+    "ram": 2,
+    "tags": [ "merc", "valentino" ],
+    "keywords": [ "attack", "defeated" ],
+    "cardText": "ATTACK: Give this Unit +2 power this turn for each friendly Gig with an even value.\n\nDEFEATED: Draw 1 for each friendly Gig with an odd value.",
+    "rarity": "EpicRare",
+    "imagePath": "Assets/Cards/jackie_ride_die.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-025",
+
+    "name": "ADAM SMASHER",
+    "subName": "METAL OVER MEAT",
+    "color": "Yellow",
+    "type": "Unit",
+    "cost": 9,
+    "power": 15,
+    "ram": 6,
+    "tags": [ "arasaka", "merc" ],
+    "keywords": [ "play" ],
+    "cardText": "PLAY: Defeat all other Units.",
+    "rarity": "EpicRare",
+    "imagePath": "Assets/Cards/smasher_mom.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-026",
+
+    "name": "KIROSHI OPTICS",
+    "color": "Yellow",
+    "type": "Gear",
+    "cost": 1,
+    "power": 1,
+    "ram": 1,
+    "tags": [ "cyberware" ],
+    "keywords": [ "attack" ],
+    "cardText": "(Equip to a friendly Unit or face-up Legend.)\n\nATTACK: Look at a friendly face-down Legend. (Don't reveal it.)",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/kiroshi_optics.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-027",
+
+    "name": "MANDIBULAR UPGRADE",
+    "color": "Yellow",
+    "type": "Gear",
+    "cost": 1,
+    "power": 0,
+    "ram": 2,
+    "tags": [ "cyberware" ],
+    "keywords": [ "blocker" ],
+    "cardText": "(Equip to a friendly Unit or face-up Legend.)\n\nBLOCKER: (You may spend this Unit to redirect a rival Unit's attack to it instead.)",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/mandibular_upgrade.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-028",
+
+    "name": "ZETATECH FACEPLATE",
+    "color": "Yellow",
+    "type": "Gear",
+    "cost": 2,
+    "power": 2,
+    "ram": 2,
+    "tags": [ "cyberware", "zetatech" ],
+    "keywords": [],
+    "cardText": "(Equip to a friendly Unit or face-up Legend.)\n\nWhen this Unit or Legend is spent, adjust a Gig by up to 1. Then, if you control 3 or more Gigs with different values, draw 1.",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/zetatech_faceplate.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-029",
+
+    "name": "GORILLA ARMS",
+    "color": "Yellow",
+    "type": "Gear",
+    "cost": 4,
+    "power": 3,
+    "ram": 3,
+    "tags": [ "cyberware" ],
+    "keywords": [],
+    "cardText": "(Equip to a friendly Unit or face-up Legend.)\n\nThe first time this Unit steals 1 or more Gigs each turn, steal a rival Gig with a value not shared by a friendly Gig.",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/gorilla_arms.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-030",
+
+    "name": "AFTERPARTY AT LIZZIE'S",
+    "color": "Yellow",
+    "type": "Program",
+    "cost": 1,
+    "ram": 1,
+    "tags": [ "quickhack" ],
+    "keywords": [],
+    "cardText": "Adjust a Gig by up to 1. If you control 2 or more Gigs with different values, draw 1.",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/afterparty_lizzies.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-031",
+
+    "name": "CYBERPSYCHOSIS",
+    "color": "Yellow",
+    "type": "Program",
+    "cost": 5,
+    "ram": 4,
+    "tags": [ "braindance" ],
+    "keywords": [ "quick" ],
+    "cardText": "QUICK: Give an equipped Unit +3 power this turn for each if its equipped Gears. If that Unit steals or fights, defeat it at the end of this turn.",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/cyberpsychosis.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-032",
+
+    "name": "BOOTLEG BLACK SAPPHIRE SHOW",
+    "color": "Yellow",
+    "type": "Program",
+    "cost": 0,
+    "power": 0,
+    "ram": 0,
+    "tags": [],
+    "keywords": [],
+    "cardText": "Sell the top card of your deck.\n\nIf you control a Gig with an even value and a Gig with an odd value, draw 2.",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/bootleg_bss.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-033",
+
+    "name": "GORO TAKEMURA",
+    "subName": "HANDS UNCLEAN",
+    "color": "Green",
+    "type": "Legend",
+    "cost": 5,
+    "power": 7,
+    "ram": 2,
+    "tags": [ "arasaka", "corpo" ],
+    "keywords": [ "go solo", "blocker" ],
+    "cardText": "GO SOLO: GO SOLO: (Pay this Legend's cost to play it as a ready Unit. It can attack this turn. If it leaves the field, remove it from the game.)\n\nBLOCKER: (You may spend this Unit to redirect a rival Unit's attack to it instead.)",
+    "rarity": "EpicRare",
+    "imagePath": "Assets/Cards/goro_hands.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-034",
+
+    "name": "GORO TAKEMURA",
+    "subName": "VENGEFUL BODYGUARD",
+    "color": "Green",
+    "type": "Legend",
+    "power": 0,
+    "ram": 2,
+    "tags": [ "arasaka", "corpo" ],
+    "keywords": [ "blocker", "quick" ],
+    "cardText": "QUICK: 1E$, Spend: Give a friendly Unit with cost 4 or less BLOCKER this turn. If you control a value-pair of Gigs, also give it +1 power this turn.\n\nWhen a friendly Unit uses BLOCKER, you may discard 1. If you do, draw 1.",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/goro_vengeful.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-035",
+
+    "name": "PANAM PALMER",
+    "subName": "NOMAD CAVALRY",
+    "color": "Green",
+    "type": "Legend",
+    "power": 0,
+    "ram": 2,
+    "tags": [ "aldecaldo", "merc", "nomad" ],
+    "keywords": [],
+    "cardText": "2E$, Spend: Move a Gear from this Legend to an unequipped friendly Unit. If you do, ready that Unit.\n\nAt the end of your turn, if 5 or more friendly Units and/or Legends are equipped, ready them.",
+    "rarity": "EpicRare",
+    "imagePath": "Assets/Cards/panam_cavalry.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-036",
+
+    "name": "SABURO ARASAKA",
+    "subName": "STUBBORN PATRIARCH",
+    "color": "Green",
+    "type": "Legend",
+    "power": 0,
+    "ram": 2,
+    "tags": [ "arasaka", "corpo" ],
+    "keywords": [],
+    "cardText": "Friendly ARASAKA Units have +1 power while attacking.\n\n(Units steal an extra Gig for every 10 power.)",
+    "rarity": "EpicRare",
+    "imagePath": "Assets/Cards/saburo_stubborn.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-037",
+
+    "name": "CORPO SECURITY",
+    "color": "Green",
+    "type": "Unit",
+    "cost": 2,
+    "power": 2,
+    "ram": 1,
+    "tags": [ "corpo" ],
+    "keywords": [ "blocker" ],
+    "cardText": "This Unit can't attack.\n\n'BLOCKER: (You may spend this Unit to redirect a rival Unit's attack to it instead.)",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/corpo_security.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-038",
+
+    "name": "EMERGENCY ATLUS",
+    "color": "Green",
+    "type": "Unit",
+    "cost": 3,
+    "power": 4,
+    "ram": 1,
+    "tags": [ "trauma team", "vehicle", "zetatech" ],
+    "keywords": [],
+    "cardText": "'Grab the policyholder, leave the rest for the city meatwagon.'",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/emergency_atlus.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-039",
+
+    "name": "RIDING NOMAD",
+    "color": "Green",
+    "type": "Unit",
+    "cost": 5,
+    "power": 4,
+    "ram": 4,
+    "tags": [ "nomad" ],
+    "keywords": [ "adrenaline" ],
+    "cardText": "ADRENALINE: (This Unit can attack the turn it's played.)",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/riding_nomad.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-040",
+
+    "name": "WRAITH MARAUDERS",
+    "color": "Green",
+    "type": "Unit",
+    "cost": 5,
+    "power": 4,
+    "ram": 2,
+    "tags": [ "ganger", "nomad", "raffen shiv" ],
+    "keywords": [],
+    "cardText": "When this Unit steals a Gig, ready another friendly Unit with power equal to the Gig's value.",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/wraith_marauders.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-041",
+
+    "name": "SANDAYU ODA",
+    "subName": "HANAKO'S GUARDIAN'",
+    "color": "Green",
+    "type": "Unit",
+    "cost": 7,
+    "power": 8,
+    "ram": 2,
+    "tags": [ "arasaka", "corpo" ],
+    "keywords": [ "play" ],
+    "cardText": "PLAY: Spend a rival Unit for each friendly value-pair of Gigs.\n\nThis Unit can attack rival Units the turn it's played.",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/oda_guardian.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-042",
+
+    "name": "SANDEVISTAN",
+    "color": "Green",
+    "type": "Gear",
+    "cost": 3,
+    "power": 2,
+    "ram": 3,
+    "tags": [ "cyberware" ],
+    "keywords": [],
+    "cardText": "(Equip to a friendly Unit or face-up Legend.)\n\nAt the end of your turn, ready this Unit or Legend.",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/sandevistan.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-043",
+
+    "name": "PEACE OFFERING",
+    "color": "Green",
+    "type": "Program",
+    "cost": 1,
+    "power": 0,
+    "ram": 1,
+    "tags": [ "braindance" ],
+    "keywords": [],
+    "cardText": "You may set a Gig's value to the value of another Gig. Then, if you control a value-pair, draw 1.",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/peace_offering.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-044",
+
+    "name": "CORPORATE SURVEILLANCE",
+    "color": "Green",
+    "type": "Program",
+    "cost": 2,
+    "power": 0,
+    "ram": 1,
+    "tags": [ "corpo" ],
+    "keywords": [],
+    "cardText": "Spend a rival Unit with cost 4 or less.",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/corpo_surveillance.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-045",
+
+    "name": "TAKE CONTROL",
+    "color": "Green",
+    "type": "Program",
+    "cost": 2,
+    "power": 0,
+    "ram": 2,
+    "tags": [ "quickhack" ],
+    "keywords": [ "quick" ],
+    "cardText": "QUICK: A rival Unit steals 1 fewer Gig this turn. If that Unit is an AI, DRONE, or VEHICLE, draw 1.",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/take_control.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-046",
+
+    "name": "V",
+    "subName": "CORPORATE EXILE",
+    "color": "Blue",
+    "type": "Legend",
+    "cost": 5,
+    "power": 8,
+    "ram": 2,
+    "tags": [ "corpo", "merc" ],
+    "keywords": [ "go solo" ],
+    "cardText": "GO SOLO: GO SOLO: (Pay this Legend's cost to play it as a ready Unit. It can attack this turn. If it leaves the field, remove it from the game.)",
+    "rarity": "EpicRare",
+    "imagePath": "Assets/Cards/v_corpo.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-047",
+
+    "name": "ALT CUNNINGHAM",
+    "subName": "SOULKILLER ARCHITECT",
+    "color": "Blue",
+    "type": "Legend",
+    "power": 0,
+    "ram": 2,
+    "tags": [ "merc", "netrunner" ],
+    "keywords": [],
+    "cardText": "Spend: Your next Program this turn plays for -1 €$ for each friendly min Gig, to a minimum of 1 €$.\n\n1E$, Spend: Play a Program from your trash. Bottom-deck it after you play it. (You still pay its cost.)",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/alt_soul.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-048",
+
+    "name": "EVELYN PARKER",
+    "subName": "BEAUTIFUL ENIGMA",
+    "color": "Blue",
+    "type": "Legend",
+    "power": 0,
+    "ram": 2,
+    "tags": [ "doll" ],
+    "keywords": [],
+    "cardText": "When a friendly CORPO or GANGER Unit steals 1 or more Gigs, ready 1 Eddie.\n\n1E$, Spend: A rival Unit must attack next turn if it can.",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/evelyn_enigma.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-049",
+
+    "name": "JACKIE WELLES",
+    "subName": "POUR ONE OUT FOR ME",
+    "color": "Blue",
+    "type": "Legend",
+    "power": 0,
+    "ram": 2,
+    "tags": [ "merc" ],
+    "keywords": [],
+    "cardText": "The first time you play a Blue Unit or Blue Gear each turn, you may decrease a friendly Gig by up to 2. If it becomes a min Gig, draw 1.",
+    "rarity": "EpicRare",
+    "imagePath": "Assets/Cards/jackie_pour.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-050",
+
+    "name": "EVELYN PARKER",
+    "subName": "SHCEMING SIREN",
+    "color": "Blue",
+    "type": "Unit",
+    "cost": 2,
+    "power": 0,
+    "ram": 3,
+    "tags": [ "doll" ],
+    "keywords": [ "attack" ],
+    "cardText": "ATTACK: Draw 1. Then, if you have more ☆ (Street Cred) than a Rival, discard 1.\n\n(Units with power 0 don't steal Gigs.)",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/evelyn_siren.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-051",
+
+    "name": "PSYCHO SQUAD",
+    "color": "Blue",
+    "type": "Unit",
+    "cost": 4,
+    "power": 6,
+    "ram": 1,
+    "tags": [ "psycho squad" ],
+    "keywords": [],
+    "cardText": "Their protocol stops at 'shoot first.'",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/psycho_squad.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-052",
+
+    "name": "LIZZIE WIZZIE",
+    "subName": "DELICATE WEAPON",
+    "color": "Blue",
+    "type": "Unit",
+    "cost": 5,
+    "power": 2,
+    "ram": 2,
+    "tags": [ "rocker" ],
+    "keywords": [ "blocker", "play" ],
+    "cardText": "PLAY: You may play a Program with cost 3 or less from your hand or trash for free. Bottom-deck it after you play it.\n\nBLOCKER",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/lizzie_delicate.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-053",
+
+    "name": "MAMAN BRIGITTE",
+    "subName": "SPIRIT OF DEATH",
+    "color": "Blue",
+    "type": "Unit",
+    "cost": 5,
+    "power": 3,
+    "ram": 4,
+    "tags": [ "mystic", "netrunner", "voodoo boys" ],
+    "keywords": [ "play" ],
+    "cardText": "PLAY: You may discard 2 Programs. If you do, bottom-deck a rival unequipped Unit.",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/maman_spirit.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-054",
+
+    "name": "MT0D12 FLATHEAD",
+    "color": "Blue",
+    "type": "Unit",
+    "cost": 5,
+    "power": 7,
+    "ram": 3,
+    "tags": [ "drone", "militech" ],
+    "keywords": [],
+    "cardText": "If you have less ☆ (Street Cred) than a Rival, this Unit can't be blocked.",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/flathead.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-055",
+
+    "name": "MODDED KUSANAGI",
+    "color": "Blue",
+    "type": "Unit",
+    "cost": 6,
+    "power": 8,
+    "ram": 2,
+    "tags": [ "tyger claws", "vehicle" ],
+    "keywords": [ "adrenaline" ],
+    "cardText": "ADRENALINE: (This Unit can attack the turn it's played.)\n\nAt the end of your turn, return this Unit to its owner's hand.",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/kusanagi.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-056",
+
+    "name": "PLACIDE",
+    "subName": "VOODOO SENTINEL",
+    "color": "Blue",
+    "type": "Unit",
+    "cost": 8,
+    "power": 10,
+    "ram": 2,
+    "tags": [ "ganger", "netrunner", "voodoo boys" ],
+    "keywords": [ "play", "attack" ],
+    "cardText": "PLAY, ATTACK: You may discard 1 Program. If you do, bottom-deck a rival Unit.",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/placide_sentinel.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-057",
+
+    "name": "DYING LIGHT",
+    "subName": "V'S PISTOL'",
+    "color": "Blue",
+    "type": "Gear",
+    "cost": 2,
+    "power": 2,
+    "ram": 2,
+    "tags": [ "merc", "weapon" ],
+    "keywords": [ "attack" ],
+    "cardText": "(Equip to a friendly Unit or face-up Legend.)\n\nATTACK: Decrease a Gig by up to 2. At the end of your turn, if this Unit is named 'V', ready 2 Eddies.",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/dying_light_v.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-058",
+
+    "name": "FLOOR IT",
+    "color": "Blue",
+    "type": "Program",
+    "cost": 1,
+    "power": 0,
+    "ram": 1,
+    "tags": [ "merc", "quickhack" ],
+    "keywords": [ "quick" ],
+    "cardText": "QUICK: Give a rival Unit -1 power this turn. Draw 1.",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/floor_it.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-059",
+
+    "name": "CHROME REVERIE",
+    "color": "Blue",
+    "type": "Program",
+    "cost": 3,
+    "power": 0,
+    "ram": 1,
+    "tags": [ "braindance" ],
+    "keywords": [],
+    "cardText": "A rival Unit can't attack until your next turn. If you control a min Gig, you may Call a Legend for free. (You can only Call a Legend once per turn.)",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/chrome_reverie.png"
+  }
+]

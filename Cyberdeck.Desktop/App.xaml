@@ -1,0 +1,15 @@
+﻿<Application x:Class="Cyberdeck.Desktop.App"
+             xmlns:converters="clr-namespace:Cyberdeck.Desktop.Converters"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Application.Resources>
+
+        <converters:CardColorToBrushConverter
+            x:Key="CardColorToBrushConverter"/>
+
+        <converters:ImagePathConverter x:Key="ImagePathConverter"/>
+
+    </Application.Resources>
+
+</Application>

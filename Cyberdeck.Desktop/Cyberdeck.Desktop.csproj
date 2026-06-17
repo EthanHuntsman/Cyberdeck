@@ -1,0 +1,287 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ViewModels\BrowseCardsViewModel.cs" />
+    <Compile Remove="Views\Pages\BrowseCardsPage.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Cards\adam_smasher_ender.png" />
+    <None Remove="Assets\Cards\afterparty_lizzies.png" />
+    <None Remove="Assets\Cards\all_is_lost.png" />
+    <None Remove="Assets\Cards\alt_soul.png" />
+    <None Remove="Assets\Cards\bombus.png" />
+    <None Remove="Assets\Cards\bootleg_bss.png" />
+    <None Remove="Assets\Cards\caliber_dog.png" />
+    <None Remove="Assets\Cards\carnage.png" />
+    <None Remove="Assets\Cards\chrome_reverie.png" />
+    <None Remove="Assets\Cards\corpo_security.png" />
+    <None Remove="Assets\Cards\corpo_surveillance.png" />
+    <None Remove="Assets\Cards\cyberpsychosis.png" />
+    <None Remove="Assets\Cards\dum_dum.png" />
+    <None Remove="Assets\Cards\dying_light_v.png" />
+    <None Remove="Assets\Cards\el_sombreron.png" />
+    <None Remove="Assets\Cards\emergency_atlus.png" />
+    <None Remove="Assets\Cards\evelyn_enigma.png" />
+    <None Remove="Assets\Cards\evelyn_siren.png" />
+    <None Remove="Assets\Cards\flathead.png" />
+    <None Remove="Assets\Cards\foor_it.png" />
+    <None Remove="Assets\Cards\gilded_maton.png" />
+    <None Remove="Assets\Cards\gorilla_arms.png" />
+    <None Remove="Assets\Cards\goro_hands.png" />
+    <None Remove="Assets\Cards\goro_vengeful.png" />
+    <None Remove="Assets\Cards\hanako_gilded.png" />
+    <None Remove="Assets\Cards\jackie_pour.png" />
+    <None Remove="Assets\Cards\jackie_ride_die.png" />
+    <None Remove="Assets\Cards\kerry.png" />
+    <None Remove="Assets\Cards\kiroshi_optics.png" />
+    <None Remove="Assets\Cards\kusanagi.png" />
+    <None Remove="Assets\Cards\maman_spirit.png" />
+    <None Remove="Assets\Cards\mandibular_upgrade.png" />
+    <None Remove="Assets\Cards\mantis_blades.png" />
+    <None Remove="Assets\Cards\meredith.png" />
+    <None Remove="Assets\Cards\minotaur.png" />
+    <None Remove="Assets\Cards\oda_guardian.png" />
+    <None Remove="Assets\Cards\offduty_malfini.png" />
+    <None Remove="Assets\Cards\panam_cavalry.png" />
+    <None Remove="Assets\Cards\peace_offering.png" />
+    <None Remove="Assets\Cards\placide_sentinel.png" />
+    <None Remove="Assets\Cards\psycho_squad.png" />
+    <None Remove="Assets\Cards\riding_nomad" />
+    <None Remove="Assets\Cards\riding_nomad.png" />
+    <None Remove="Assets\Cards\river_ward_hunt.png" />
+    <None Remove="Assets\Cards\royce_dont.png" />
+    <None Remove="Assets\Cards\royce_psycho.png" />
+    <None Remove="Assets\Cards\saburo_stubborn.png" />
+    <None Remove="Assets\Cards\sandevistan.png" />
+    <None Remove="Assets\Cards\satori.png" />
+    <None Remove="Assets\Cards\smasher_mom.png" />
+    <None Remove="Assets\Cards\swordwise.png" />
+    <None Remove="Assets\Cards\take_control.png" />
+    <None Remove="Assets\Cards\t_bug_amateur.png" />
+    <None Remove="Assets\Cards\vik_vek_relax.png" />
+    <None Remove="Assets\Cards\v_corpo.png" />
+    <None Remove="Assets\Cards\v_streetkid.png" />
+    <None Remove="Assets\Cards\wraith_marauders.png" />
+    <None Remove="Assets\Cards\yorinobu_embracing.png" />
+    <None Remove="Assets\Cards\zetatech_faceplate.png" />
+    <None Remove="Assets\goro_placeholder.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Views\Pages\BrowseCardsPage.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <Content Include="Assets\Cards\**\*.*">
+	  	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cyberdeck.Core\Cyberdeck.Core.csproj" />
+    <ProjectReference Include="..\Cyberdeck.Data\Cyberdeck.Data.csproj" />
+    <ProjectReference Include="..\Cyberdeck.Services\Cyberdeck.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Database\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Cards\adam_smasher_ender.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\afterparty_lizzies.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\all_is_lost.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\alt_soul.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\bombus.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\bootleg_bss.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\caliber_dog.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\carnage.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\chrome_reverie.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\corpo_security.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\corpo_surveillance.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\cyberpsychosis.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\dum_dum.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\dying_light_v.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\el_sombreron.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\emergency_atlus.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\evelyn_enigma.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\evelyn_siren.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\flathead.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\foor_it.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\gilded_maton.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\gorilla_arms.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\goro_hands.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\goro_vengeful.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\hanako_gilded.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\jackie_pour.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\jackie_ride_die.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\kerry.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\kiroshi_optics.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\kusanagi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\maman_spirit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\mandibular_upgrade.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\mantis_blades.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\meredith.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\minotaur.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\oda_guardian.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\offduty_malfini.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\panam_cavalry.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\peace_offering.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\placide_sentinel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\psycho_squad.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\riding_nomad.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\river_ward_hunt.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\royce_dont.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\royce_psycho.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\saburo_stubborn.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\sandevistan.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\satori.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\smasher_mom.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\swordwise.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\take_control.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\t_bug_amateur.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\vik_vek_relax.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\v_corpo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\v_streetkid.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\wraith_marauders.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\yorinobu_embracing.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Cards\zetatech_faceplate.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\goro_placeholder.png" />
+  </ItemGroup>
+
+</Project>

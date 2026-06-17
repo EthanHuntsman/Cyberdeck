@@ -1,0 +1,15 @@
+# Build output anywhere
+**/bin/
+**/obj/
+
+# Visual Studio
+.vs/
+
+# SQLite
+*.db
+*.db-shm
+*.db-wal
+
+# User-specific
+*.user
+*.suo

@@ -1,0 +1,639 @@
+﻿<Page x:Class="Cyberdeck.Desktop.Views.Pages.DeckBuilderPage"
+      x:Name="Root"
+      xmlns:vm="clr-namespace:Cyberdeck.Desktop.ViewModels"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Cyberdeck.Desktop.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1200"
+      d:DataContext="{d:DesignInstance Type=vm:DeckBuilderViewModel}"
+      Title="DeckBuilderPage"
+      Background="#0B0F14">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--TOP BAR-->
+
+        <!--Filters-->
+        <Border HorizontalAlignment="Left"
+                Margin="5"
+                CornerRadius="8"
+                BorderBrush="#2B3A4D"
+                Background="#1A2330"
+                BorderThickness="1"
+                Padding="12"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2">
+
+            <StackPanel Orientation="Horizontal">
+
+                <!--Color Filters-->
+                <Expander Header="Colors"
+                          FontWeight="Bold"
+                          Background="#121922"
+                          Foreground="#E8EEF5"
+                          BorderBrush="#37D9FF"
+                          BorderThickness="1">
+                    <ItemsControl ItemsSource="{Binding ColorFilters}"
+                                  Margin="0,0,5,0">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox Content="{Binding Value}"
+                                          IsChecked="{Binding IsSelected}"
+                                          Foreground="#9FB0C3"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </Expander>
+
+                <!--Type Filters-->
+                <Expander Header="Type"
+                          FontWeight="Bold"
+                          Background="#121922"
+                          Foreground="#E8EEF5"
+                          BorderBrush="#37D9FF"
+                          BorderThickness="1">
+                    <ItemsControl ItemsSource="{Binding TypeFilters}"
+                                  Margin="0,0,5,0">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox Content="{Binding Value}"
+                                          IsChecked="{Binding IsSelected}"
+                                          Foreground="#9FB0C3"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </Expander>
+
+                <!--Tags Filters-->
+                <Expander Header="Tags"
+                          FontWeight="Bold"
+                          Background="#121922"
+                          Foreground="#E8EEF5"
+                          BorderBrush="#37D9FF"
+                          BorderThickness="1">
+                    <ItemsControl ItemsSource="{Binding TagFilters}"
+                                  Margin="0,0,5,0">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox Content="{Binding Value}"
+                                          IsChecked="{Binding IsSelected}"
+                                          Foreground="#9FB0C3"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </Expander>
+
+
+                <!--Keywords Filters-->
+                <Expander Header="Keywords"
+                          FontWeight="Bold"
+                          Background="#121922"
+                          Foreground="#E8EEF5"
+                          BorderBrush="#37D9FF"
+                          BorderThickness="1">
+                    <ItemsControl ItemsSource="{Binding KeywordFilters}"
+                                  Margin="0,0,5,0">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox Content="{Binding Value}"
+                                          IsChecked="{Binding IsSelected}"
+                                          Foreground="#9FB0C3"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </Expander>
+
+
+                <!--Cost Filters-->
+                <Expander Header="Cost"
+                          FontWeight="Bold"
+                          Background="#121922"
+                          Foreground="#E8EEF5"
+                          BorderBrush="#37D9FF"
+                          BorderThickness="1">
+                    <ItemsControl ItemsSource="{Binding CostFilters}"
+                                  Margin="0,0,5,0">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox Content="{Binding Value}"
+                                          IsChecked="{Binding IsSelected}"
+                                          Foreground="#9FB0C3"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </Expander>
+
+
+                <!--Power Filters-->
+                <Expander Header="Power"
+                          FontWeight="Bold"
+                          Background="#121922"
+                          Foreground="#E8EEF5"
+                          BorderBrush="#37D9FF"
+                          BorderThickness="1">
+                    <ItemsControl ItemsSource="{Binding PowerFilters}"
+                                  Margin="0,0,5,0">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox Content="{Binding Value}"
+                                          IsChecked="{Binding IsSelected}"
+                                          Foreground="#9FB0C3"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </Expander>
+
+
+                <!--Ram Filters-->
+                <Expander Header="RAM"
+                          FontWeight="Bold"
+                          Background="#121922"
+                          Foreground="#E8EEF5"
+                          BorderBrush="#37D9FF"
+                          BorderThickness="1">
+                    <ItemsControl ItemsSource="{Binding RamFilters}"
+                                  Margin="0,0,5,0">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox Content="{Binding Value}"
+                                          IsChecked="{Binding IsSelected}"
+                                          Foreground="#9FB0C3"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </Expander>
+
+            </StackPanel>
+        </Border>
+
+        <!--Deck Menu-->
+        <Border HorizontalAlignment="Right"
+                Margin="5"
+                CornerRadius="8"
+                BorderBrush="#2B3A4D"
+                BorderThickness="1"
+                Background="#1A2330"
+                Padding="12"
+                Grid.Row="0"
+                Grid.Column="2"
+                Grid.ColumnSpan="2"
+                Height="Auto"
+                VerticalAlignment="Top">
+
+            <StackPanel Orientation="Horizontal">
+
+                <Button Content="New Deck"
+                        Command="{Binding NewDeckCommand}"
+                        Margin="5,5,0,5"
+                        Padding="2,2,2,2"
+                        Background="#F7D354"
+                        Foreground="#0B0F14"
+                        FontWeight="Bold"/>
+
+                <Button Content="Save Deck"
+                        Command="{Binding SaveDeckCommand}"
+                        Margin="5,5,0,5"
+                        Padding="2,2,2,2"
+                        Background="#F7D354"
+                        Foreground="#0B0F14"
+                        FontWeight="Bold"
+                        />
+
+                <Button Content="Delete Deck"
+                        Command="{Binding DeleteDeckCommand}"
+                        CommandParameter="{Binding SelectedSavedDeck}"
+                        Margin="5,5,0,5"
+                        Padding="2,2,2,2"
+                        Background="#FF4D6D"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        />
+
+                <ComboBox ItemsSource="{Binding SavedDecks}"
+                          SelectedItem="{Binding SelectedSavedDeck}"
+                          Margin="5"
+                          Width="150"
+                          DisplayMemberPath="Name"
+                          Background="#F7D354"
+                          Foreground="#0B0F14"
+                          FontWeight="Bold"
+                          />
+
+            </StackPanel>
+        </Border>
+
+        <!--Card List-->
+        <Grid Grid.Row="1"
+              Grid.Column="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--Search-->
+            <TextBox Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Left"
+                     Margin="10,0,5,0"
+                     Width="300"
+                     Height="20"
+                     Background="#121922"
+                     Foreground="#E8EEF5"
+                     BorderBrush="#37D9FF"
+                     BorderThickness="1"
+                     Grid.Row="0"/>
+
+            <DataGrid ItemsSource="{Binding DataContext.Cards, ElementName=Root}"
+                      SelectedItem="{Binding SelectedCard, Mode=TwoWay}"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      SelectionMode="Single"
+                      CanUserAddRows="False"
+                      Background="#1A2330"
+                      BorderBrush="#2B3A4D"
+                      Margin="5,5,5,0"
+                      Grid.Row="1"
+                      Width="Auto">
+
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background"
+                                Value="#121922"/>
+
+                        <Setter Property="Foreground"
+                                Value="#F7D354"/>
+
+                        <Setter Property="FontWeight"
+                                Value="Bold"/>
+
+                        <Setter Property="BorderBrush"
+                                Value="#37D9FF"/>
+
+                        <Setter Property="BorderThickness"
+                                Value="0,0,0,1"/>
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+
+                        <Setter Property="Background"
+                                Value="{Binding Color, Converter={StaticResource CardColorToBrushConverter}}"/>
+
+                        <Style.Triggers>
+
+                            <Trigger Property="IsSelected"
+                                     Value="True">
+
+                                <Setter Property="Background"
+                                        Value="#37D9FF"/>
+
+                                <Setter Property="Foreground"
+                                        Value="#0B0F14"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+
+                <DataGrid.CellStyle>
+                    <Style TargetType="DataGridCell">
+
+                        <Setter Property="TextBlock.TextAlignment"
+                                Value="Center"/>
+
+                        <Setter Property="HorizontalContentAlignment"
+                                Value="Center"/>
+
+                        <Setter Property="VerticalContentAlignment"
+                                Value="Center"/>
+
+                        <Setter Property="FontWeight"
+                                Value="Bold"/>
+
+                    </Style>
+                </DataGrid.CellStyle>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name"
+                            Binding="{Binding Name}"
+                            Width="Auto"/>
+
+                    <DataGridTextColumn Header="Sub-Name"
+                            Binding="{Binding SubName}"
+                            Width="Auto"/>
+
+                    <DataGridTextColumn Header="Type"
+                            Binding="{Binding Type}"
+                            Width="Auto"/>
+
+                    <DataGridTextColumn Header="RAM"
+                            Binding="{Binding Ram}"
+                            Width="Auto"/>
+
+                    <DataGridTextColumn Header="Cost"
+                            Binding="{Binding Cost}"
+                            Width="Auto"/>
+
+                    <DataGridTextColumn Header="Power"
+                            Binding="{Binding Power}"
+                            Width="Auto"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Grid Grid.Row="1"
+              Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--Add/Remove Buttons-->
+            <StackPanel Orientation="Horizontal"
+                        Grid.Row="0"
+                        HorizontalAlignment="Center"
+                        Margin="0,0,0,5">
+
+                <Button Content="-"
+                        Width="100"
+                        Height="30"
+                        FontWeight="Bold"
+                        Margin="5,0,10,0"
+                        Background="#F7D354"
+                        Foreground="#0B0F14"
+
+                        Command="{Binding RemoveCardFromDeckCommand}"
+
+                        CommandParameter="{Binding SelectedCard}"/>
+
+                <Button Content="+"
+                        Width="100"
+                        Height="30"
+                        FontWeight="Bold"
+                        Background="#F7D354"
+                        Foreground="#0B0F14"
+                        Margin="5,0,10,0"
+                
+                        Command="{Binding AddCardToDeckCommand}"
+                
+                        CommandParameter="{Binding SelectedCard}"/>
+            </StackPanel>
+
+            <!--Card Preview-->
+            <ScrollViewer VerticalScrollBarVisibility="Auto"
+                          HorizontalScrollBarVisibility="Disabled"
+                          Grid.Row="1">
+
+                <StackPanel>
+                    <StackPanel>
+                        <Image Source="{Binding SelectedCard.ImagePath,
+                                Converter={StaticResource ImagePathConverter}}"
+                                   Stretch="Uniform"/>
+
+                        <TextBlock Text="{Binding SelectedCard.Name}"
+                                   FontSize="24"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"
+                                   Margin="5,0,0,4"
+                                   Foreground="#E8EEF5"/>
+
+                        <TextBlock Text="{Binding SelectedCard.SubName}"
+                                   FontSize="18"
+                                   FontWeight="Bold"
+                                   TextWrapping="Wrap"
+                                   Margin="5,0,0,4"
+                                   Foreground="#E8EEF5"/>
+
+                        <TextBlock Text="{Binding SelectedCard.Type}"
+                                   FontSize="15"
+                                   FontWeight="SemiBold"
+                                   Margin="5,0,0,12"
+                                   Foreground="#E8EEF5"/>
+
+                        <Separator Margin="0,0,0,16"
+                                   Foreground="#E8EEF5"/>
+                    </StackPanel>
+
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Grid.Column="0"
+                                    Margin="5,0,0,0">
+
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="0,0,0,12">
+                                <TextBlock Text="Color: "
+                                           FontWeight="Bold"
+                                           Foreground="#E8EEF5"/>
+                                <TextBlock Text="{Binding SelectedCard.Color}"
+                                           Foreground="#E8EEF5"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="0,0,0,12">
+                                <TextBlock Text="RAM: "
+                                           FontWeight="Bold"
+                                           Foreground="#E8EEF5"/>
+                                <TextBlock Text="{Binding SelectedCard.Ram}"
+                                           Foreground="#E8EEF5"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="0,0,0,12">
+                                <TextBlock Text="Cost: "
+                                           FontWeight="Bold"
+                                           Foreground="#E8EEF5"/>
+                                <TextBlock Text="{Binding SelectedCard.Cost}"
+                                           Foreground="#E8EEF5"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="0,0,0,12">
+                                <TextBlock Text="Power: "
+                                           FontWeight="Bold"
+                                           Foreground="#E8EEF5"/>
+                                <TextBlock Text="{Binding SelectedCard.Power}"
+                                           Foreground="#E8EEF5"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal"
+                                        Margin="0,0,0,12">
+                                <TextBlock Text="Rarity: "
+                                           FontWeight="Bold"
+                                           Foreground="#E8EEF5"/>
+                                <TextBlock Text="{Binding SelectedCard.Rarity}"
+                                           Foreground="#E8EEF5"/>
+                            </StackPanel>
+
+                        </StackPanel>
+
+                        <Border BorderBrush="#2B3A4D"
+                                BorderThickness="1"
+                                CornerRadius="8"
+                                Padding="10"
+                                Margin="5,0,5,0"
+                                Grid.Column="1">
+                            
+                            <TextBlock Text="{Binding SelectedCard.CardText}"
+                                       TextWrapping="Wrap"
+                                       FontSize="14"
+                                       Margin="0,0,0,16"
+                                       Grid.Column="1"
+                                       Foreground="#E8EEF5"/>
+
+                        </Border>
+                    </Grid>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+
+        <!--Decklist-->
+        <Grid Grid.Row="1"
+              Grid.Column="2">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBox Text="{Binding DeckNameText, UpdateSourceTrigger=Default}"
+                     Width="300"
+                     Height="20"
+                     VerticalAlignment="Center"
+                     HorizontalAlignment="Left"
+                     Background="#121922"
+                     Foreground="#E8EEF5"
+                     BorderBrush="#37D9FF"
+                     BorderThickness="1"
+                     Margin="5,0,0,5"
+                     Grid.Row="0"/>
+
+
+            <DataGrid ItemsSource="{Binding CurrentDeckCards}"
+                      SelectedItem="{Binding SelectedDeckCard, Mode=TwoWay}"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      SelectionMode="Single"
+                      CanUserAddRows="False"
+                      Background="#1A2330"
+                      BorderBrush="#2B3A4D"
+                      Grid.Row="1"
+                      Width="Auto">
+
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background"
+                                Value="#121922"/>
+
+                        <Setter Property="Foreground"
+                                Value="#F7D354"/>
+
+                        <Setter Property="FontWeight"
+                                Value="Bold"/>
+
+                        <Setter Property="BorderBrush"
+                                Value="#37D9FF"/>
+
+                        <Setter Property="BorderThickness"
+                                Value="0,0,0,1"/>
+
+                        <Setter Property="Margin"
+                                Value="5,0,5,0"/>
+
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+
+                        <Setter Property="Background"
+                                Value="{Binding Card.Color, Converter={StaticResource CardColorToBrushConverter}}"/>
+
+                        <Style.Triggers>
+
+                            <Trigger Property="IsSelected"
+                                     Value="True">
+
+                                <Setter Property="Background"
+                                        Value="#37D9FF"/>
+
+                                <Setter Property="Foreground"
+                                        Value="#0B0F14"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+
+                <DataGrid.CellStyle>
+                    <Style TargetType="DataGridCell">
+
+                        <Setter Property="TextBlock.TextAlignment"
+                                Value="Center"/>
+
+                        <Setter Property="HorizontalContentAlignment"
+                                Value="Center"/>
+
+                        <Setter Property="VerticalContentAlignment"
+                                Value="Center"/>
+
+                        <Setter Property="FontWeight"
+                                Value="Bold"/>
+
+                    </Style>
+                </DataGrid.CellStyle>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name"
+                            Binding="{Binding Card.Name}"
+                            Width="Auto"/>
+
+                    <DataGridTextColumn Header="Sub-Name"
+                            Binding="{Binding Card.SubName}"
+                            Width="Auto"/>
+
+                    <DataGridTextColumn Header="Type"
+                            Binding="{Binding Card.Type}"
+                            Width="Auto"/>
+
+                    <DataGridTextColumn Header="RAM"
+                            Binding="{Binding Card.Ram}"
+                            Width="Auto"/>
+
+                    <DataGridTextColumn Header="Cost"
+                            Binding="{Binding Card.Cost}"
+                            Width="Auto"/>
+
+                    <DataGridTextColumn Header="Power"
+                            Binding="{Binding Card.Power}"
+                            Width="Auto"/>
+
+                    <DataGridTextColumn Header="Qty"
+                            Binding="{Binding Quantity}"
+                            Width="Auto"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+    </Grid>
+</Page>

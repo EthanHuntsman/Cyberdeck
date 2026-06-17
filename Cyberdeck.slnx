@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Cyberdeck.Core/Cyberdeck.Core.csproj" Id="45c40112-ba23-4bec-9c86-c76f9597244b" />
+  <Project Path="Cyberdeck.Data/Cyberdeck.Data.csproj" Id="be536eb2-d1b8-4d18-87cd-c065c34f8218" />
+  <Project Path="Cyberdeck.Desktop/Cyberdeck.Desktop.csproj" />
+  <Project Path="Cyberdeck.Services/Cyberdeck.Services.csproj" Id="7a8590f2-228b-4f47-977b-4dc4541fe824" />
+  <Project Path="Cyberdeck.Tests/Cyberdeck.Tests.csproj" Id="b8818afa-efec-4f08-a1b5-10bcfc215cbc" />
+</Solution>
