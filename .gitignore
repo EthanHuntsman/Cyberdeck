@@ -13,3 +13,7 @@
 # User-specific
 *.user
 *.suo
+
+#Past versions/publish
+Publish/
+v1*

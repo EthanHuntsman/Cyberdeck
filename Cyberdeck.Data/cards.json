@@ -1007,5 +1007,54 @@
     "cardText": "A rival Unit can't attack until your next turn. If you control a min Gig, you may Call a Legend for free. (You can only Call a Legend once per turn.)",
     "rarity": "Common",
     "imagePath": "Assets/Cards/chrome_reverie.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-060",
+    "name": "6TH STREET RECRUITS",
+    "color": "Red",
+    "type": "Unit",
+    "cost": 4,
+    "power": 6,
+    "ram": 1,
+    "tags": [ "6th street", "ganger" ],
+    "keywords": [],
+    "cardText": "When a friendly Unit steals a d6, increase a Gig by up to 6.",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/6_street.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-061",
+    "name": "SKETCHY RIPPER",
+    "color": "Yellow",
+    "type": "Unit",
+    "cost": 2,
+    "power": 0,
+    "ram": 2,
+    "tags": [ "ganger", "ripperdoc", "scavenger" ],
+    "keywords": [ "attack" ],
+    "cardText": "ATTACK: Search the top 3 cards of your deck. Reveal a Gear and add it to your hand. Bottom-deck the rest.\n\n(Units with power 0 don't steal Gigs.)",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/sketchy_rip.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-062",
+    "name": "OVERWATCH",
+    "subName": "PANAM'S GIFT'",
+    "color": "Green",
+    "type": "Gear",
+    "cost": 4,
+    "power": 4,
+    "ram": 4,
+    "tags": [ "weapon" ],
+    "keywords": [ "quick" ],
+    "cardText": "QUICK: 1E$, Spend: Discard 1. Defeat a spent rival Unit with cost equal to or less than the discarded card's cost.",
+    "rarity": "EpicRare",
+    "imagePath": "Assets/Cards/overwatch.png"
   }
 ]
