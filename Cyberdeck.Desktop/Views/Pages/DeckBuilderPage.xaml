@@ -513,6 +513,7 @@
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
@@ -528,8 +529,8 @@
                      Margin="5,0,0,5"
                      Grid.Row="0"/>
 
-
-            <DataGrid ItemsSource="{Binding CurrentDeckCards}"
+            <!--Legends-->
+            <DataGrid ItemsSource="{Binding CurrentDeckLegends}"
                       SelectedItem="{Binding SelectedDeckCard, Mode=TwoWay}"
                       AutoGenerateColumns="False"
                       IsReadOnly="True"
@@ -538,6 +539,112 @@
                       Background="#1A2330"
                       BorderBrush="#2B3A4D"
                       Grid.Row="1"
+                      Width="Auto">
+
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background"
+                Value="#121922"/>
+
+                        <Setter Property="Foreground"
+                Value="#F7D354"/>
+
+                        <Setter Property="FontWeight"
+                Value="Bold"/>
+
+                        <Setter Property="BorderBrush"
+                Value="#37D9FF"/>
+
+                        <Setter Property="BorderThickness"
+                Value="0,0,0,1"/>
+
+                        <Setter Property="Margin"
+                Value="5,0,5,0"/>
+
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+
+                <DataGrid.RowStyle>
+                    <Style TargetType="DataGridRow">
+
+                        <Setter Property="Background"
+                Value="{Binding Card.Color, Converter={StaticResource CardColorToBrushConverter}}"/>
+
+                        <Style.Triggers>
+
+                            <Trigger Property="IsSelected"
+                     Value="True">
+
+                                <Setter Property="Background"
+                        Value="#37D9FF"/>
+
+                                <Setter Property="Foreground"
+                        Value="#0B0F14"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.RowStyle>
+
+                <DataGrid.CellStyle>
+                    <Style TargetType="DataGridCell">
+
+                        <Setter Property="TextBlock.TextAlignment"
+                Value="Center"/>
+
+                        <Setter Property="HorizontalContentAlignment"
+                Value="Center"/>
+
+                        <Setter Property="VerticalContentAlignment"
+                Value="Center"/>
+
+                        <Setter Property="FontWeight"
+                Value="Bold"/>
+
+                    </Style>
+                </DataGrid.CellStyle>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Name"
+            Binding="{Binding Card.Name}"
+            Width="Auto"/>
+
+                    <DataGridTextColumn Header="Sub-Name"
+            Binding="{Binding Card.SubName}"
+            Width="Auto"/>
+
+                    <DataGridTextColumn Header="Type"
+            Binding="{Binding Card.Type}"
+            Width="Auto"/>
+
+                    <DataGridTextColumn Header="RAM"
+            Binding="{Binding Card.Ram}"
+            Width="Auto"/>
+
+                    <DataGridTextColumn Header="Cost"
+            Binding="{Binding Card.Cost}"
+            Width="Auto"/>
+
+                    <DataGridTextColumn Header="Power"
+            Binding="{Binding Card.Power}"
+            Width="Auto"/>
+
+                    <DataGridTextColumn Header="Qty"
+            Binding="{Binding Quantity}"
+            Width="Auto"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!--Decklist-->
+            <DataGrid ItemsSource="{Binding CurrentDeckCards}"
+                      SelectedItem="{Binding SelectedDeckCard, Mode=TwoWay}"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      SelectionMode="Single"
+                      CanUserAddRows="False"
+                      Background="#1A2330"
+                      BorderBrush="#2B3A4D"
+                      Grid.Row="2"
                       Width="Auto">
 
                 <DataGrid.ColumnHeaderStyle>
