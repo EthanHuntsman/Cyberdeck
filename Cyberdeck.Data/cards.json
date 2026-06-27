@@ -1045,7 +1045,7 @@
     "sellable": true,
     "cardId": "CORE-A-062",
     "name": "OVERWATCH",
-    "subName": "PANAM'S GIFT'",
+    "subName": "PANAM'S GIFT",
     "color": "Green",
     "type": "Gear",
     "cost": 4,
@@ -1056,5 +1056,38 @@
     "cardText": "QUICK: 1E$, Spend: Discard 1. Defeat a spent rival Unit with cost equal to or less than the discarded card's cost.",
     "rarity": "EpicRare",
     "imagePath": "Assets/Cards/overwatch.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-063",
+    "name": "MISTY OLSZEWSKI",
+    "subName": "MENDER OF BROKEN SPIRITS",
+    "color": "Blue",
+    "type": "Unit",
+    "cost": 3,
+    "power": 0,
+    "ram": 2,
+    "tags": [ "mystic" ],
+    "keywords": [],
+    "cardText": "This Unit can't attack.\n\nAt the end of your turn, choose a card type. Then, reveal the top card of your deck. If it's the chosen type, add it to your hand and ready 1 Eddie. Otherwise, trash it.\n\n(Card types include Unit, Gear, and Program.)",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/misty_mender.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-064",
+    "name": "MOX INCITERS",
+    "color": "Blue",
+    "type": "Unit",
+    "cost": 3,
+    "power": 2,
+    "ram": 2,
+    "tags": [ "ganger", "mox" ],
+    "keywords": [ "play", "blocker" ],
+    "cardText": "PLAY: A rival Unit must attack next turn if it can.\n\nBLOCKER: (You may spend this Unit to redirect a rival Unit's attack to it instead.)",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/mox_inciters.png"
   }
 ]

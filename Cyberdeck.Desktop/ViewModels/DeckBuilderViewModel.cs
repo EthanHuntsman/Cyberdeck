@@ -6,6 +6,7 @@ using Cyberdeck.Data;
 using Cyberdeck.Desktop.Helpers;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Windows;
@@ -22,6 +23,7 @@ namespace Cyberdeck.Desktop.ViewModels
         private ObservableCollection<Card> cards = new();
 
         public ObservableCollection<DeckCard> CurrentDeckCards { get; } = new();
+        public ObservableCollection<DeckCard> CurrentDeckLegends { get; } = new();
 
         [ObservableProperty]
         private Card? selectedCard;
@@ -251,9 +253,10 @@ namespace Cyberdeck.Desktop.ViewModels
                     selectedRams.Contains(c.Ram));
             }
 
-            var result = filtered.ToList();
-
-            filtered = filtered.OrderBy(c => c.Color);
+            var result = filtered
+                .OrderBy(c => c.Color)
+                .ThenBy(c => c.Name)
+                .ToList();
 
             Cards.Clear();
 
@@ -280,26 +283,45 @@ namespace Cyberdeck.Desktop.ViewModels
             if (card is null)
                 return;
 
-            var existing = CurrentDeckCards
+            if (card.Type == CardType.Legend)
+            {
+                if (CurrentDeckLegends.Count >= 3) return;
+
+                var existing = CurrentDeckLegends
                 .FirstOrDefault(dc => dc.Card.Id == card.Id);
 
-            if (existing is not null && existing.Quantity >= 3) return;
+                if (existing is not null) return;
 
-            if (existing is not null)
-            {
-                existing.Quantity++;
-            }
-            else
-            {
-                CurrentDeckCards.Add(new DeckCard
+                CurrentDeckLegends.Add(new DeckCard
                 {
                     Card = card,
                     CardId = card.Id,
                     Quantity = 1
                 });
             }
+            else
+            {
+                var existing = CurrentDeckCards
+                .FirstOrDefault(dc => dc.Card.Id == card.Id);
 
-            OnPropertyChanged(nameof(DeckCardCount));
+                if (existing is not null && existing.Quantity >= 3) return;
+
+                if (existing is not null)
+                {
+                    existing.Quantity++;
+                }
+                else
+                {
+                    CurrentDeckCards.Add(new DeckCard
+                    {
+                        Card = card,
+                        CardId = card.Id,
+                        Quantity = 1
+                    });
+                }
+
+                OnPropertyChanged(nameof(DeckCardCount));
+            }
         }
 
         [RelayCommand]
@@ -307,21 +329,33 @@ namespace Cyberdeck.Desktop.ViewModels
         {
             if (card is null) return;
 
-            var existing = CurrentDeckCards
+            if (card.Type == CardType.Legend)
+            {
+                var existing = CurrentDeckLegends
                 .FirstOrDefault(dc => dc.Card.Id == card.Id);
 
-            if (existing is null) return;
+                if (existing is null) return;
 
-            if (existing.Quantity > 1)
-            {
-                existing.Quantity--;
+                CurrentDeckLegends.Remove(existing);
             }
             else
             {
-                CurrentDeckCards.Remove(existing);
-            }
+                var existing = CurrentDeckCards
+                .FirstOrDefault(dc => dc.Card.Id == card.Id);
 
-            OnPropertyChanged(nameof(DeckCardCount));
+                if (existing is null) return;
+
+                if (existing.Quantity > 1)
+                {
+                    existing.Quantity--;
+                }
+                else
+                {
+                    CurrentDeckCards.Remove(existing);
+                }
+
+                OnPropertyChanged(nameof(DeckCardCount));
+            }
         }
 
         [RelayCommand]
@@ -346,6 +380,7 @@ namespace Cyberdeck.Desktop.ViewModels
             DeckNameText = CurrentDeck.Name;
 
             CurrentDeckCards.Clear();
+            CurrentDeckLegends.Clear();
         }
 
         [RelayCommand]
@@ -372,7 +407,7 @@ namespace Cyberdeck.Desktop.ViewModels
 
             await _db.SaveChangesAsync();
 
-            foreach (var deckCard in CurrentDeckCards)
+            foreach (var deckCard in CurrentDeckCards.Concat(CurrentDeckLegends))
             {
                 _db.DeckCards.Add(new DeckCard
                 {
@@ -412,11 +447,17 @@ namespace Cyberdeck.Desktop.ViewModels
             DeckNameText = CurrentDeck.Name;
 
             CurrentDeckCards.Clear();
+            CurrentDeckLegends.Clear();
 
             foreach (var deckCard in loadedDeck.Cards)
             {
-                CurrentDeckCards.Add(deckCard);
+                if (deckCard.Card.Type == CardType.Legend)
+                    CurrentDeckLegends.Add(deckCard);
+                else
+                    CurrentDeckCards.Add(deckCard);
             }
+
+            OnPropertyChanged(nameof(DeckCardCount));
         }
 
         [RelayCommand]
@@ -430,6 +471,7 @@ namespace Cyberdeck.Desktop.ViewModels
             CurrentDeck = null;
             SelectedSavedDeck = null;
             CurrentDeckCards.Clear();
+            CurrentDeckLegends.Clear();
             DeckNameText = "Untitled Deck";
 
             await LoadDecksAsync();
