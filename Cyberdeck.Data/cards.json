@@ -1139,5 +1139,136 @@
     "cardText": "Other friendly Units have +2 power while attacking.\n\nAt the end of your turn, ready up to 3 friendly Units.",
     "rarity": "Rare",
     "imagePath": "Assets/Cards/saul_stormrider.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-068",
+    "name": "YORINOBU ARASAKA",
+    "subName": "STEEL DRAGON",
+    "color": "Red",
+    "type": "Unit",
+    "cost": 7,
+    "power": 9,
+    "ram": 3,
+    "tags": [ "arasaka", "corpo" ],
+    "keywords": [ "play" ],
+    "cardText": "PLAY: You may play a Unit with cost 4 or less from your hand or trash for free. It can attack rival Units this turn.\n\nThe first time an ARASAKA Unit is defeated each turn, draw 1.",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/yorinobu_steel_dragon.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-069",
+    "name": "INDUSTRIAL ASSEMBLY",
+    "color": "Red",
+    "type": "Program",
+    "cost": 1,
+    "power": 0,
+    "ram": 1,
+    "tags": [ "arasaka", "braindance" ],
+    "keywords": [],
+    "cardText": "Increase a Gig by up to 4. If you control a Gig with 8+ value, draw 1.",
+    "rarity": "Uncommon",
+    "imagePath": ""
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-070",
+    "name": "GORO TAKEMURA",
+    "subName": "LOSING HIS WAY",
+    "color": "Green",
+    "type": "Unit",
+    "cost": 4,
+    "power": 4,
+    "ram": 3,
+    "tags": [ "arasaka", "corpo" ],
+    "keywords": ["attack"],
+    "cardText": "ATTACK: If all friendly Legends are face-up, this Unit has +5 power this turn.",
+    "rarity": "Uncommon",
+    "imagePath": ""
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-071",
+    "name": "FIELD OPERATOR",
+    "color": "Green",
+    "type": "Unit",
+    "cost": 3,
+    "power": 2,
+    "ram": 2,
+    "tags": [ "arasaka", "corpo", "techie" ],
+    "keywords": [ "play" ],
+    "cardText": "PLAY: If your ☆ (Street Cred) is an even number, draw 1.",
+    "rarity": "Common",
+    "imagePath": ""
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-072",
+    "name": "OVER THE EDGE",
+    "color": "Red",
+    "type": "Program",
+    "cost": 3,
+    "power": 0,
+    "ram": 2,
+    "tags": [ "merc" ],
+    "keywords": [],
+    "cardText": "Defeat a Unit with power equal to or less than the value of a friendly d20.",
+    "rarity": "Common",
+    "imagePath": ""
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-073",
+    "name": "DELAMAIN CAB",
+    "color": "Blue",
+    "type": "Unit",
+    "cost": 4,
+    "power": 4,
+    "ram": 2,
+    "tags": [ "vehicle" ],
+    "keywords": [],
+    "cardText": "At the end of your turn, if this Unit stole a Gig this turn, ready 1 Eddie.",
+    "rarity": "Common",
+    "imagePath": ""
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-074",
+    "name": "DEXTER DESHAWN",
+    "subName": "ONE LAST CHANCE",
+    "color": "Yellow",
+    "type": "Unit",
+    "cost": 3,
+    "power": 4,
+    "ram": 2,
+    "tags": [ "fixer" ],
+    "keywords": [ "play", "attack", "defeated" ],
+    "cardText": "PLAY, ATTACK: Adjust a Gig by up to 1.\n\nDEFEATED: If your ☆ (Street Cred) differs from a Rival's by 10+, draw 2.",
+    "rarity": "Uncommon",
+    "imagePath": ""
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-075",
+    "name": "REBOOT OPTICS",
+    "color": "Blue",
+    "type": "Program",
+    "cost": 2,
+    "power": 0,
+    "ram": 2,
+    "tags": [ "quickhack" ],
+    "keywords": ["quick"],
+    "cardText": "QUICK: The next time a rival Unit fights this turn, it doesn't defeat the opposing friendly Unit.",
+    "rarity": "Common",
+    "imagePath": ""
   }
 ]
