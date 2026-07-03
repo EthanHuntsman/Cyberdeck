@@ -2,6 +2,18 @@
 
 All notable changes to Cyberdeck will be documented in this file.
 
+## [1.4.0]
+
+### Added
+
+*Saul Bright - Stormrider
+*La Llorona - Ghost of the Past
+*Kerry Eurodyne - Axe, Attitude, Audience
+
+### Fixed
+
+*Card list not sorting properly
+
 ## [1.3.1]
 
 ### Added

@@ -88,11 +88,16 @@ namespace Cyberdeck.Desktop.ViewModels
 
             TagFilters =
             [
-                new("maelstrom", ApplyFilters),
-                new("cyberware", ApplyFilters),
                 new("arasaka", ApplyFilters),
-                new("braindance", ApplyFilters),
+                new("aldecaldo", ApplyFilters),
+                new("ganger", ApplyFilters),
+                new("maelstrom", ApplyFilters),
                 new("merc", ApplyFilters),
+                new("corpo", ApplyFilters),
+                new("rocker", ApplyFilters),
+                new("samurai", ApplyFilters),
+                new("militech", ApplyFilters),
+                new("valentino", ApplyFilters),
                 new("drone", ApplyFilters)
             ];
 
@@ -255,6 +260,8 @@ namespace Cyberdeck.Desktop.ViewModels
 
             var result = filtered
                 .OrderBy(c => c.Color)
+                .ThenBy(c => c.Type)
+                .ThenBy(c => c.Cost)
                 .ThenBy(c => c.Name)
                 .ToList();
 
@@ -273,6 +280,11 @@ namespace Cyberdeck.Desktop.ViewModels
             var cards = await _cardService.GetAllCardsAsync();
 
             _allCards = cards.ToList();
+
+            TagFilters.Clear();
+
+           
+               
 
             ApplyFilters();
         }
