@@ -164,7 +164,7 @@
     <Resource Include="Assets\Cards\flathead.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Assets\Cards\foor_it.png">
+    <Resource Include="Assets\Cards\floor_it.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Cards\gilded_maton.png">
