@@ -515,6 +515,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <TextBox Text="{Binding DeckNameText, UpdateSourceTrigger=Default}"
@@ -740,6 +741,8 @@
 
                 </DataGrid.Columns>
             </DataGrid>
+            
+            
         </Grid>
 
     </Grid>

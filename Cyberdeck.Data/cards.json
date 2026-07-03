@@ -1089,5 +1089,55 @@
     "cardText": "PLAY: A rival Unit must attack next turn if it can.\n\nBLOCKER: (You may spend this Unit to redirect a rival Unit's attack to it instead.)",
     "rarity": "Common",
     "imagePath": "Assets/Cards/mox_inciters.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-065",
+    "name": "KERRY EURODYNE",
+    "subName": "AXE, ATTITUDE, AUDIENCE",
+    "color": "Yellow",
+    "type": "Legend",
+    "power": 0,
+    "ram": 2,
+    "tags": [ "rocker", "samurai" ],
+    "keywords": [],
+    "cardText": "When you roll in a Gig from your fixer area, you may ignore the result and reroll it once.\n\nWhen you roll a min or max value on a Gig, draw 1. If it's a d20, draw 3 instead.",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/kerry_aaa.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-066",
+    "name": "LA LLORONA",
+    "subName": "GHOST OF THE PAST",
+    "color": "Red",
+    "type": "Unit",
+    "cost": 3,
+    "power": 3,
+    "ram": 1,
+    "tags": [ "ganger", "valentino" ],
+    "keywords": [ "blocker" ],
+    "cardText": "BLOCKER: (You may spend this Unit to redirect a rival Unit's attack to it instead.)\n\nWhen this Unit uses BLOCKER increase a Gig by up to 3.",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/la_llorona.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-067",
+    "name": "SAUL BRIGHT",
+    "subName": "STORMRIDER",
+    "color": "Green",
+    "type": "Unit",
+    "cost": 8,
+    "power": 14,
+    "ram": 2,
+    "tags": [ "aldecaldo", "nomad" ],
+    "keywords": [],
+    "cardText": "Other friendly Units have +2 power while attacking.\n\nAt the end of your turn, ready up to 3 friendly Units.",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/saul_stormrider.png"
   }
 ]
