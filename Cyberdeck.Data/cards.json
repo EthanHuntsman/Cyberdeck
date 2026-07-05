@@ -532,10 +532,10 @@
     "name": "BOOTLEG BLACK SAPPHIRE SHOW",
     "color": "Yellow",
     "type": "Program",
-    "cost": 0,
+    "cost": 5,
     "power": 0,
-    "ram": 0,
-    "tags": [],
+    "ram": 4,
+    "tags": ["braindance"],
     "keywords": [],
     "cardText": "Sell the top card of your deck.\n\nIf you control a Gig with an even value and a Gig with an odd value, draw 2.",
     "rarity": "Uncommon",
@@ -884,7 +884,7 @@
     "keywords": [ "blocker", "play" ],
     "cardText": "PLAY: You may play a Program with cost 3 or less from your hand or trash for free. Bottom-deck it after you play it.\n\nBLOCKER",
     "rarity": "Rare",
-    "imagePath": "Assets/Cards/lizzie_delicate.png"
+    "imagePath": "Assets/Cards/lizzy_delicate.png"
   },
 
   {
@@ -1354,5 +1354,21 @@
     "cardText": "This Unit can't attack unless you played a Program this turn.",
     "rarity": "Common",
     "imagePath": "Assets/Cards/jacked_voodoo.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-081",
+    "name": "AUGMENTED NEGOTIATORS",
+    "color": "Yellow",
+    "type": "Unit",
+    "cost": 3,
+    "power": 2,
+    "ram": 1,
+    "tags": [ "arasaka", "corpo" ],
+    "keywords": [ "blocker" ],
+    "cardText": "BLOCKER (You may spend this Unit to redirect a rival Unit's attack to it instead.)\n\nWhen this Unit uses BLOCKER, a Rival discards 1.",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/negotiators.png"
   }
 ]
