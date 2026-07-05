@@ -2,6 +2,15 @@
 
 All notable changes to Cyberdeck will be documented in this file.
 
+##[1.5.2]
+
+### Added
+*Augmented Negotiators
+
+### Fixed
+*Lizzie Wizzie image
+*Bootleg Black Sapphire card data
+
 ##[1.5.1]
 
 ### Added
