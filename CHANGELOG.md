@@ -2,6 +2,36 @@
 
 All notable changes to Cyberdeck will be documented in this file.
 
+##[1.5.1]
+
+### Added
+*Screw - Lovelorn Fool
+*Industrial Assembly image
+*Over the Edge image
+*Dexter Deshawn - One Last Chance image
+*Field Operator image
+*Goro Takemura - Losing His Way image
+*Nadia - Fighting Through Grief
+*Sasha Yakovleva - Won't Let You Down
+*Delamain Cab image
+*Reboot Optics image
+*Jacked-In Voodoo Boy
+*Viktor Vektor - You Might Feel A Little Pinch
+
+##[1.5.0]
+After this update, all card reveals will be a minor update (x.x.1) instead of a normal update (x.1.x).
+
+### Added
+
+*Yorinobu - Steel Dragon
+*Industrial Assembly
+*Field Operator
+*Goro Takemura - Losing His Way
+*Over the Edge
+*Reboot Optics
+*Dexter Deshawn - One Last Chance
+*Delamain Cab
+
 ## [1.4.0]
 
 ### Added
