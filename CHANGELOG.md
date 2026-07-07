@@ -2,7 +2,20 @@
 
 All notable changes to Cyberdeck will be documented in this file.
 
-##[1.5.2]
+##[1.6.0] - 2026-06-07
+
+### Added
+*Deck regulations warnings/errors
+
+### Fixed
+*Problem with saving a new deck after deleting one
+
+### Changed
+*Card quantity limits are now displayed in the deck regulations area rather than hard coded in
+
+---
+
+##[1.5.2] - 2026-06-06
 
 ### Added
 *Augmented Negotiators
@@ -11,7 +24,9 @@ All notable changes to Cyberdeck will be documented in this file.
 *Lizzie Wizzie image
 *Bootleg Black Sapphire card data
 
-##[1.5.1]
+---
+
+##[1.5.1] - 2026-07-05
 
 ### Added
 *Screw - Lovelorn Fool
@@ -27,7 +42,9 @@ All notable changes to Cyberdeck will be documented in this file.
 *Jacked-In Voodoo Boy
 *Viktor Vektor - You Might Feel A Little Pinch
 
-##[1.5.0]
+---
+
+##[1.5.0] - 2026-07-03
 After this update, all card reveals will be a minor update (x.x.1) instead of a normal update (x.1.x).
 
 ### Added
@@ -41,7 +58,9 @@ After this update, all card reveals will be a minor update (x.x.1) instead of a 
 *Dexter Deshawn - One Last Chance
 *Delamain Cab
 
-## [1.4.0]
+---
+
+## [1.4.0] - 2026-07-03
 
 ### Added
 
@@ -53,7 +72,9 @@ After this update, all card reveals will be a minor update (x.x.1) instead of a 
 
 *Card list not sorting properly
 
-## [1.3.1]
+---
+
+## [1.3.1] - 2026-06-27
 
 ### Added
 
@@ -70,7 +91,9 @@ After this update, all card reveals will be a minor update (x.x.1) instead of a 
 
 * The SubName of Overwatch - Panam's Gift
 
-## [1.2.0]
+---
+
+## [1.2.0] - 2026-06-22
 
 ### Added
 

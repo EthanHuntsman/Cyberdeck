@@ -286,6 +286,9 @@
 
                         <Setter Property="BorderThickness"
                                 Value="0,0,0,1"/>
+                        
+                        <Setter Property="Margin"
+                                Value="5,0,5,0"/>
                     </Style>
                 </DataGrid.ColumnHeaderStyle>
 
@@ -515,7 +518,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
 
             <TextBox Text="{Binding DeckNameText, UpdateSourceTrigger=Default}"
@@ -545,22 +548,22 @@
                 <DataGrid.ColumnHeaderStyle>
                     <Style TargetType="DataGridColumnHeader">
                         <Setter Property="Background"
-                Value="#121922"/>
+                                Value="#121922"/>
 
                         <Setter Property="Foreground"
-                Value="#F7D354"/>
+                                Value="#F7D354"/>
 
                         <Setter Property="FontWeight"
-                Value="Bold"/>
+                                Value="Bold"/>
 
                         <Setter Property="BorderBrush"
-                Value="#37D9FF"/>
+                                Value="#37D9FF"/>
 
                         <Setter Property="BorderThickness"
-                Value="0,0,0,1"/>
+                                Value="0,0,0,1"/>
 
                         <Setter Property="Margin"
-                Value="5,0,5,0"/>
+                                Value="5,0,5,0"/>
 
                     </Style>
                 </DataGrid.ColumnHeaderStyle>
@@ -569,18 +572,18 @@
                     <Style TargetType="DataGridRow">
 
                         <Setter Property="Background"
-                Value="{Binding Card.Color, Converter={StaticResource CardColorToBrushConverter}}"/>
+                                Value="{Binding Card.Color, Converter={StaticResource CardColorToBrushConverter}}"/>
 
                         <Style.Triggers>
 
                             <Trigger Property="IsSelected"
-                     Value="True">
+                                     Value="True">
 
                                 <Setter Property="Background"
-                        Value="#37D9FF"/>
+                                        Value="#37D9FF"/>
 
                                 <Setter Property="Foreground"
-                        Value="#0B0F14"/>
+                                        Value="#0B0F14"/>
                             </Trigger>
                         </Style.Triggers>
                     </Style>
@@ -590,48 +593,48 @@
                     <Style TargetType="DataGridCell">
 
                         <Setter Property="TextBlock.TextAlignment"
-                Value="Center"/>
+                                Value="Center"/>
 
                         <Setter Property="HorizontalContentAlignment"
-                Value="Center"/>
+                                Value="Center"/>
 
                         <Setter Property="VerticalContentAlignment"
-                Value="Center"/>
+                                Value="Center"/>
 
                         <Setter Property="FontWeight"
-                Value="Bold"/>
+                                Value="Bold"/>
 
                     </Style>
                 </DataGrid.CellStyle>
 
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Name"
-            Binding="{Binding Card.Name}"
-            Width="Auto"/>
+                                        Binding="{Binding Card.Name}"
+                                        Width="Auto"/>
 
                     <DataGridTextColumn Header="Sub-Name"
-            Binding="{Binding Card.SubName}"
-            Width="Auto"/>
+                                        Binding="{Binding Card.SubName}"
+                                        Width="Auto"/>
 
                     <DataGridTextColumn Header="Type"
-            Binding="{Binding Card.Type}"
-            Width="Auto"/>
+                                        Binding="{Binding Card.Type}"
+                                        Width="Auto"/>
 
                     <DataGridTextColumn Header="RAM"
-            Binding="{Binding Card.Ram}"
-            Width="Auto"/>
+                                        Binding="{Binding Card.Ram}"
+                                        Width="Auto"/>
 
                     <DataGridTextColumn Header="Cost"
-            Binding="{Binding Card.Cost}"
-            Width="Auto"/>
+                                        Binding="{Binding Card.Cost}"
+                                        Width="Auto"/>
 
                     <DataGridTextColumn Header="Power"
-            Binding="{Binding Card.Power}"
-            Width="Auto"/>
+                                        Binding="{Binding Card.Power}"
+                                        Width="Auto"/>
 
                     <DataGridTextColumn Header="Qty"
-            Binding="{Binding Quantity}"
-            Width="Auto"/>
+                                        Binding="{Binding Quantity}"
+                                        Width="Auto"/>
 
                 </DataGrid.Columns>
             </DataGrid>
@@ -742,8 +745,15 @@
                 </DataGrid.Columns>
             </DataGrid>
             
-            
+            <!-- Deck Validation Result -->
+            <ItemsControl ItemsSource="{Binding DeckValidation.Errors}"
+                          Grid.Row="4">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" Foreground="Red" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </Grid>
-
     </Grid>
 </Page>

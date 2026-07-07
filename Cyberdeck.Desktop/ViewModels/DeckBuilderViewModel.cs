@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using Cyberdeck.Core.Enums;
 using Cyberdeck.Core.Models;
+using Cyberdeck.Core.Rules;
 using Cyberdeck.Data;
 using Cyberdeck.Desktop.Helpers;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +25,9 @@ namespace Cyberdeck.Desktop.ViewModels
 
         public ObservableCollection<DeckCard> CurrentDeckCards { get; } = new();
         public ObservableCollection<DeckCard> CurrentDeckLegends { get; } = new();
+
+        [ObservableProperty]
+        private DeckValidationResult deckValidation = new();
 
         [ObservableProperty]
         private Card? selectedCard;
@@ -283,9 +287,6 @@ namespace Cyberdeck.Desktop.ViewModels
 
             TagFilters.Clear();
 
-           
-               
-
             ApplyFilters();
         }
 
@@ -297,26 +298,27 @@ namespace Cyberdeck.Desktop.ViewModels
 
             if (card.Type == CardType.Legend)
             {
-                if (CurrentDeckLegends.Count >= 3) return;
-
                 var existing = CurrentDeckLegends
                 .FirstOrDefault(dc => dc.Card.Id == card.Id);
 
-                if (existing is not null) return;
-
-                CurrentDeckLegends.Add(new DeckCard
+                if (existing is not null)
                 {
-                    Card = card,
-                    CardId = card.Id,
-                    Quantity = 1
-                });
+                    existing.Quantity++;
+                }
+                else
+                {
+                    CurrentDeckLegends.Add(new DeckCard
+                    {
+                        Card = card,
+                        CardId = card.Id,
+                        Quantity = 1
+                    });
+                }
             }
             else
             {
                 var existing = CurrentDeckCards
                 .FirstOrDefault(dc => dc.Card.Id == card.Id);
-
-                if (existing is not null && existing.Quantity >= 3) return;
 
                 if (existing is not null)
                 {
@@ -331,9 +333,9 @@ namespace Cyberdeck.Desktop.ViewModels
                         Quantity = 1
                     });
                 }
-
-                OnPropertyChanged(nameof(DeckCardCount));
             }
+
+            ValidateDeck();
         }
 
         [RelayCommand]
@@ -348,7 +350,14 @@ namespace Cyberdeck.Desktop.ViewModels
 
                 if (existing is null) return;
 
-                CurrentDeckLegends.Remove(existing);
+                if (existing.Quantity > 1)
+                {
+                    existing.Quantity--;
+                }
+                else
+                {
+                    CurrentDeckLegends.Remove(existing);
+                }
             }
             else
             {
@@ -365,9 +374,9 @@ namespace Cyberdeck.Desktop.ViewModels
                 {
                     CurrentDeckCards.Remove(existing);
                 }
-
-                OnPropertyChanged(nameof(DeckCardCount));
             }
+
+            ValidateDeck();
         }
 
         [RelayCommand]
@@ -378,7 +387,7 @@ namespace Cyberdeck.Desktop.ViewModels
 
             deckCard.Quantity++;
 
-            OnPropertyChanged(nameof(DeckCardCount));
+            ValidateDeck();
         }
 
         [RelayCommand]
@@ -393,6 +402,8 @@ namespace Cyberdeck.Desktop.ViewModels
 
             CurrentDeckCards.Clear();
             CurrentDeckLegends.Clear();
+
+            ValidateDeck();
         }
 
         [RelayCommand]
@@ -469,7 +480,7 @@ namespace Cyberdeck.Desktop.ViewModels
                     CurrentDeckCards.Add(deckCard);
             }
 
-            OnPropertyChanged(nameof(DeckCardCount));
+            ValidateDeck();
         }
 
         [RelayCommand]
@@ -480,15 +491,14 @@ namespace Cyberdeck.Desktop.ViewModels
             _db.Decks.Remove(CurrentDeck);
             await _db.SaveChangesAsync();
 
-            CurrentDeck = null;
-            SelectedSavedDeck = null;
-            CurrentDeckCards.Clear();
-            CurrentDeckLegends.Clear();
-            DeckNameText = "Untitled Deck";
+            NewDeck();
 
             await LoadDecksAsync();
         }
 
-        public int DeckCardCount => CurrentDeckCards.Sum(dc => dc.Quantity);
+        private void ValidateDeck()
+        {
+            DeckValidation = DeckValidator.Validate(CurrentDeckCards.Concat(CurrentDeckLegends));
+        }
     }
 }
