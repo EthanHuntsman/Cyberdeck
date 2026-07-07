@@ -97,13 +97,9 @@ After this update, all card reveals will be a minor update (x.x.1) instead of a 
 
 ### Added
 
-* Added README.md
-* Added CHANGELOG.md
-* Added ROADMAP.md
-
-### Changed
-
-### Fixed
+* README.md
+* CHANGELOG.md
+* ROADMAP.md
 
 ---
 
@@ -111,12 +107,8 @@ After this update, all card reveals will be a minor update (x.x.1) instead of a 
 
 ### Added
 
-* Added newly revealed Cyberpunk TCG cards.
-* Added card images for new cards.
-
-### Changed
-
-### Fixed
+* Newly revealed Cyberpunk TCG cards.
+* Card images for new cards.
 
 ---
 
