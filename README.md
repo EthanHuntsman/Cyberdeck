@@ -53,6 +53,8 @@ Cyberdeck is actively under development.
 
 Current Version: v1.6.0
 
+See the [CHANGELOG](CHANGELOG.md) for a full version history.
+
 ## Planned Features
 
 * Import/Export decklists
