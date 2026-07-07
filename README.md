@@ -8,13 +8,16 @@ Built with C#, WPF, .NET, EF Core, and SQLite, Cyberdeck allows players to brows
 
 * Card database browser
 * Search by card name and text
-* Filter cards by color and type
+* Filter cards by color, type, tag, keyword, cost, power, and RAM
 * Card image support
-* Deck building and editing
-* Save and load decks locally
+* Add and remove cards from deck
+* Deck regulation/validation
+* Save, load, and delete decks locally
 * Offline SQLite database
 
 ## Installation
+
+### Download
 
 1. Navigate to the Releases page.
 2. Download the latest release zip file.
@@ -23,27 +26,30 @@ Built with C#, WPF, .NET, EF Core, and SQLite, Cyberdeck allows players to brows
 
 No additional installation is required.
 
+### Windows Security Warning
+
+Cyberdeck is currently distributed as an independent application and is not code-signed.
+
+When launching Cyberdeck for the first time, Windows Defender SmartScreen may display a warning that the app is from an unknown publisher.
+
+To continue:
+
+1. Click **More info**
+2. Click **Run anyway**
+
+This warning appears because Cyberdeck does not yet have a commercial code-signing certificate, not because the application contains malware.
+
 ## Current Status
 
 Cyberdeck is actively under development.
 
-The current focus is:
+Current Version: v1.6.0
 
-* Maintaining an up-to-date card database
-* Improving deck-building functionality
-* Adding quality-of-life features
-* Expanding analysis and collection tools
+## Planned Features
 
-See `ROADMAP.md` for planned features and `CHANGELOG.md` for release history.
-
-## Technology Stack
-
-* C#
-* .NET
-* WPF
-* MVVM
-* Entity Framework Core
-* SQLite
+* Import/Export decklists
+* Collection tracking
+* Playtesting
 
 ## Disclaimer
 
@@ -53,4 +59,6 @@ All card names, artwork, trademarks, and intellectual property belong to their r
 
 ## License
 
-This project is provided for educational and community purposes.
+MIT License
+
+See LICENSE for details.
