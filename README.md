@@ -4,6 +4,14 @@ Cyberdeck is an unofficial desktop database and deck builder for the Cyberpunk T
 
 Built with C#, WPF, .NET, EF Core, and SQLite, Cyberdeck allows players to browse cards, search and filter the database, and create and manage deck lists.
 
+## Quick Facts
+
+- Platform: Windows
+- Framework: .NET 10 WPF
+- Database: SQLite
+- Status: Active Development
+- Current Version: v1.6.0
+
 ## Features
 
 * Card database browser
