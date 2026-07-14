@@ -1367,8 +1367,73 @@
     "ram": 1,
     "tags": [ "arasaka", "corpo" ],
     "keywords": [ "blocker" ],
-    "cardText": "BLOCKER (You may spend this Unit to redirect a rival Unit's attack to it instead.)\n\nWhen this Unit uses BLOCKER, a Rival discards 1.",
+    "cardText": "BLOCKER: (You may spend this Unit to redirect a rival Unit's attack to it instead.)\n\nWhen this Unit uses BLOCKER, a Rival discards 1.",
     "rarity": "Common",
     "imagePath": "Assets/Cards/negotiators.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-082",
+    "name": "FOOL ON THE HILL",
+    "color": "Green",
+    "type": "Program",
+    "cost": 2,
+    "power": 0,
+    "ram": 3,
+    "tags": [ "merc" ],
+    "keywords": [],
+    "cardText": "Reveal the top 2 cards of your deck. A Rival chooses whether you add them to your hand or trash them. If you trash them, draw 2.",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/fool_hill.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-083",
+    "name": "APPETITE FOR DESTRUCTION",
+    "color": "Red",
+    "type": "Program",
+    "cost": 3,
+    "power": 0,
+    "ram": 4,
+    "tags": [ "ganger" ],
+    "keywords": [],
+    "cardText": "The next time a friendly Unit wins a fight by 3+ power this turn, it also steals a Gig.",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/appetite_destruction.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-084",
+    "name": "HANAKO ARASAKA",
+    "subName": "DAUGHTER OF THE EMPEROR",
+    "color": "Green",
+    "type": "Legend",
+    "power": 0,
+    "ram": 2,
+    "tags": [ "arasaka", "corpo", "netrunner" ],
+    "keywords": [],
+    "cardText": "SPEND: Swap a friendly Gig with a rival Gig.\n\nAt the start of your turn, draw 1 for each friendly value-pair of Gigs.",
+    "rarity": "Rare",
+    "imagePath": "Assets/Cards/hanako_daughter.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-085",
+    "name": "PEPE NAJARRO",
+    "subName": "WORKING DOUBLES",
+    "color": "Green",
+    "type": "Unit",
+    "cost": 4,
+    "power": 6,
+    "ram": 2,
+    "tags": [ "valentino" ],
+    "keywords": [ "attack" ],
+    "cardText": "ATTACK: If you control a value-pair of Gigs, ready up to 2 MERC Legends in your Legends area.",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/pepe_working.png"
   }
 ]
