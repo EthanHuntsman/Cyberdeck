@@ -2,6 +2,21 @@
 
 All notable changes to Cyberdeck will be documented in this file.
 
+## [1.6.1] - 2026-07-14
+
+### Added
+* Fool On the Hill
+* Appetite for Destruction
+* Hanako Arasaka - Daughter of the Emperor
+* Pepe Najarro - Working Doubles
+
+### Fixed
+* Search bar not updating cardlist
+
+### Changed
+* Window size
+* Card and deck list sizes
+
 ## [1.6.0] - 2026-06-07
 
 ### Added
