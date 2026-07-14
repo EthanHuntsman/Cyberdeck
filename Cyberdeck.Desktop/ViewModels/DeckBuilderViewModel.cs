@@ -176,12 +176,26 @@ namespace Cyberdeck.Desktop.ViewModels
             if (CurrentDeck != null) CurrentDeck.Name = value;
         }
 
+        partial void OnSearchTextChanged(string? oldValue, string newValue)
+        {
+            ApplyFilters();
+        }
+
         private void ApplyFilters()
         {
             if (_allCards.Count() == 0) return;
 
             IEnumerable<Card> filtered = _allCards;
 
+
+            if (!string.IsNullOrWhiteSpace(SearchText))
+            {
+                filtered = filtered.Where(c =>
+                    c.Name.Contains(SearchText, StringComparison.OrdinalIgnoreCase) ||
+                    (c.CardText?.Contains(SearchText, StringComparison.OrdinalIgnoreCase) ?? false) ||
+                    c.Tags.Any(t => t.Contains(SearchText, StringComparison.OrdinalIgnoreCase)) ||
+                    c.Keywords.Any(k => k.Contains(SearchText, StringComparison.OrdinalIgnoreCase)));
+            }
 
             var selectedColors = ColorFilters
                 .Where(f => f.IsSelected)
