@@ -11,7 +11,7 @@ All notable changes to Cyberdeck will be documented in this file.
 * Pepe Najarro - Working Doubles
 
 ### Fixed
-* Search bar not updating cardlist
+* Search bar not updating card list
 
 ### Changed
 * Window size
