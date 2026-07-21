@@ -176,6 +176,25 @@
                     </ItemsControl>
                 </Expander>
 
+                <!--Sellable Filters-->
+                <Expander Header="Sellable"
+                          FontWeight="Bold"
+                          Background="#121922"
+                          Foreground="#E8EEF5"
+                          BorderBrush="#37D9FF"
+                          BorderThickness="1">
+                    <ItemsControl ItemsSource="{Binding SellableFilters}"
+                                  Margin="0,0,5,0">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox Content="{Binding Value}"
+                                          IsChecked="{Binding IsSelected}"
+                                          Foreground="#9FB0C3"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </Expander>
+
             </StackPanel>
         </Border>
 
@@ -355,6 +374,19 @@
                             Binding="{Binding Power}"
                             Width="35"/>
 
+                    <DataGridTemplateColumn Header="E$">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Sellable,
+                                                          Converter={StaticResource BoolToSymbolConverter}}"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           FontSize="16"
+                                           FontWeight="Bold"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
@@ -383,6 +415,12 @@
                         Command="{Binding RemoveCardFromDeckCommand}"
 
                         CommandParameter="{Binding SelectedCard}"/>
+
+                <TextBlock FontSize="26"
+                           FontWeight="Bold"
+                           Background="#121922"
+                           Foreground="#E8EEF5"
+                           Text="{Binding SelectedCardQuantity}"/>
 
                 <Button Content="+"
                         Width="100"
@@ -607,6 +645,10 @@
                 </DataGrid.CellStyle>
 
                 <DataGrid.Columns>
+                    <DataGridTextColumn Header="QTY"
+                                        Binding="{Binding Quantity}"
+                                        Width="35"/>
+
                     <DataGridTextColumn Header="Name"
                                         Binding="{Binding Card.Name}"
                                         Width="*"/>
@@ -631,9 +673,18 @@
                                         Binding="{Binding Card.Power}"
                                         Width="35"/>
 
-                    <DataGridTextColumn Header="QTY"
-                                        Binding="{Binding Quantity}"
-                                        Width="35"/>
+                    <DataGridTemplateColumn Header="E$">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Card.Sellable,
+                                                          Converter={StaticResource BoolToSymbolConverter}}"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           FontSize="16"
+                                           FontWeight="Bold"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
 
                 </DataGrid.Columns>
             </DataGrid>
@@ -713,6 +764,10 @@
                 </DataGrid.CellStyle>
 
                 <DataGrid.Columns>
+                    <DataGridTextColumn Header="QTY"
+                                        Binding="{Binding Quantity}"
+                                        Width="35"/>
+
                     <DataGridTextColumn Header="Name"
                             Binding="{Binding Card.Name}"
                             Width="*"/>
@@ -737,9 +792,18 @@
                             Binding="{Binding Card.Power}"
                             Width="35"/>
 
-                    <DataGridTextColumn Header="QTY"
-                            Binding="{Binding Quantity}"
-                            Width="35"/>
+                    <DataGridTemplateColumn Header="E$">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Card.Sellable,
+                                                          Converter={StaticResource BoolToSymbolConverter}}"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           FontSize="16"
+                                           FontWeight="Bold"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
 
                 </DataGrid.Columns>
             </DataGrid>

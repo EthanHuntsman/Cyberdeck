@@ -1435,5 +1435,86 @@
     "cardText": "ATTACK: If you control a value-pair of Gigs, ready up to 2 MERC Legends in your Legends area.",
     "rarity": "Uncommon",
     "imagePath": "Assets/Cards/pepe_working.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-086",
+    "name": "JAPANTOWN JONIN",
+    "color": "Red",
+    "type": "Unit",
+    "cost": 2,
+    "power": 0,
+    "ram": 2,
+    "tags": [ "tyger claws" ],
+    "keywords": [ "play" ],
+    "cardText": "PLAY: Give a friendly Unit +2 power this turn.\n\n(Units with power 0 don't steal Gigs.)",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/jj.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-087",
+    "name": "OCTANT",
+    "color": "Red",
+    "type": "Unit",
+    "cost": 7,
+    "power": 8,
+    "ram": 4,
+    "tags": [ "drone", "militech", "zetatech" ],
+    "keywords": [],
+    "cardText": "Play this Unit for -1 €$ for each friendly Gig with 8+ value, to a minimum of 1 €$.",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/octant.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-088",
+    "name": "LIVE WITH THE AFTERMATH",
+    "color": "Yellow",
+    "type": "Program",
+    "cost": 3,
+    "power": 0,
+    "ram": 3,
+    "tags": [ "plan" ],
+    "keywords": [],
+    "cardText": "Each player defeats one of their Units.",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/live_aftermath.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-089",
+    "name": "VALENTINO STREET RACER",
+    "color": "Green",
+    "type": "Unit",
+    "cost": 3,
+    "power": 3,
+    "ram": 2,
+    "tags": [ "valentino", "vehicle" ],
+    "keywords": [ "play", "adrenaline" ],
+    "cardText": "PLAY: Give another friendly Unit with cost 5 or less ADRENALINE this turn. (A Unit with Adrenaline can attack the turn it's played.)",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/vsr.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-090",
+    "name": "RITA WHEELER",
+    "subName": "NO STUPID QUESTIONS",
+    "color": "Blue",
+    "type": "Unit",
+    "cost": 4,
+    "power": 4,
+    "ram": 2,
+    "tags": [ "ganger", "mox" ],
+    "keywords": [ "blocker" ],
+    "cardText": "BLOCKER: (You may spend this Unit to redirect a rival Unit's attack to it instead.)\n\nThe first time this Unit is spent each turn, draw 1, then discard 1.",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/rita_stupid.png"
   }
 ]
