@@ -2,6 +2,21 @@
 
 All notable changes to Cyberdeck will be documented in this file.
 
+## [1.6.2] - 2026-07-21
+
+### Added
+* Filter by sellable
+* Sellable column in card and deck lists
+* Rita Wheeler - No Stupid Questions
+* Octant
+* Live with the Aftermath
+* Japantown Jonin
+* Valentino Street Racer
+
+### Changed
+* Card quantity now also shows in the card previewer
+* Card quantity column was moved to the front
+
 ## [1.6.1] - 2026-07-14
 
 ### Added
