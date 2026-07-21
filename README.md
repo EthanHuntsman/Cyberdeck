@@ -10,7 +10,7 @@ Built with C#, WPF, .NET, EF Core, and SQLite, Cyberdeck allows players to brows
 - Framework: .NET 10 WPF
 - Database: SQLite
 - Status: Active Development
-- Current Version: v1.6.1
+- Current Version: v1.6.2
 
 ## Features
 
@@ -51,7 +51,7 @@ This warning appears because Cyberdeck does not yet have a commercial code-signi
 
 Cyberdeck is actively under development.
 
-Current Version: v1.6.1
+Current Version: v1.6.2
 
 See the [CHANGELOG](CHANGELOG.md) for a full version history.
 
