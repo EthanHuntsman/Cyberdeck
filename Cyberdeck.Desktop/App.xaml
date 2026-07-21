@@ -8,7 +8,11 @@
         <converters:CardColorToBrushConverter
             x:Key="CardColorToBrushConverter"/>
 
-        <converters:ImagePathConverter x:Key="ImagePathConverter"/>
+        <converters:ImagePathConverter 
+            x:Key="ImagePathConverter"/>
+
+        <converters:BoolToSymbolConverter
+            x:Key="BoolToSymbolConverter"/>
 
     </Application.Resources>
 

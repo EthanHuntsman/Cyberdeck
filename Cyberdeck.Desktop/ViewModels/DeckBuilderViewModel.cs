@@ -36,6 +36,9 @@ namespace Cyberdeck.Desktop.ViewModels
         private DeckCard? selectedDeckCard;
 
         [ObservableProperty]
+        private int? selectedCardQuantity;
+
+        [ObservableProperty]
         private Deck? selectedSavedDeck;
 
 
@@ -50,6 +53,7 @@ namespace Cyberdeck.Desktop.ViewModels
         public ObservableCollection<FilterOption<int?>> CostFilters { get; } = [];
         public ObservableCollection<FilterOption<int?>> PowerFilters { get; } = [];
         public ObservableCollection<FilterOption<int>> RamFilters { get; } = [];
+        public ObservableCollection<FilterOption<bool>> SellableFilters { get; } = [];
 
 
         [ObservableProperty]
@@ -153,6 +157,12 @@ namespace Cyberdeck.Desktop.ViewModels
                 new(6, ApplyFilters)
             ];
 
+            SellableFilters =
+            [
+                new(true, ApplyFilters),
+                new(false, ApplyFilters)
+            ];
+
             NewDeck();
         }
 
@@ -161,6 +171,41 @@ namespace Cyberdeck.Desktop.ViewModels
             if (value is null) return;
 
             SelectedCard = value.Card;
+            SelectedCardQuantity = value.Quantity;
+        }
+
+        partial void OnSelectedCardChanged(Card? value)
+        {
+            if (value is null) return;
+
+            if (value.Type == CardType.Legend)
+            {
+                var exists = CurrentDeckLegends.FirstOrDefault(
+                    c => c.Card.Id == value.Id);
+
+                if (exists is not null)
+                {
+                    SelectedCardQuantity = exists.Quantity;
+                }
+                else
+                {
+                    SelectedCardQuantity = 0;
+                }
+            }
+            else
+            {
+                var exists = CurrentDeckCards.FirstOrDefault(
+                    c => c.Card.Id == value.Id);
+
+                if (exists is not null)
+                {
+                    SelectedCardQuantity = exists.Quantity;
+                }
+                else
+                {
+                    SelectedCardQuantity = 0;
+                }
+            }
         }
 
         partial void OnSelectedSavedDeckChanged(Deck? value)
@@ -276,6 +321,17 @@ namespace Cyberdeck.Desktop.ViewModels
                     selectedRams.Contains(c.Ram));
             }
 
+            var selectedSellable = SellableFilters
+                .Where(f => f.IsSelected)
+                .Select(f => f.Value)
+                .ToList();
+
+            if (selectedSellable.Any())
+            {
+                filtered = filtered.Where(c =>
+                    selectedSellable.Contains(c.Sellable));
+            }
+
             var result = filtered
                 .OrderBy(c => c.Color)
                 .ThenBy(c => c.Type)
@@ -318,6 +374,8 @@ namespace Cyberdeck.Desktop.ViewModels
                 if (existing is not null)
                 {
                     existing.Quantity++;
+
+                    SelectedCardQuantity++;
                 }
                 else
                 {
@@ -327,6 +385,8 @@ namespace Cyberdeck.Desktop.ViewModels
                         CardId = card.Id,
                         Quantity = 1
                     });
+
+                    SelectedCardQuantity = 1;
                 }
             }
             else
@@ -337,6 +397,8 @@ namespace Cyberdeck.Desktop.ViewModels
                 if (existing is not null)
                 {
                     existing.Quantity++;
+
+                    SelectedCardQuantity++;
                 }
                 else
                 {
@@ -346,6 +408,8 @@ namespace Cyberdeck.Desktop.ViewModels
                         CardId = card.Id,
                         Quantity = 1
                     });
+
+                    SelectedCardQuantity = 1;
                 }
             }
 
@@ -367,10 +431,14 @@ namespace Cyberdeck.Desktop.ViewModels
                 if (existing.Quantity > 1)
                 {
                     existing.Quantity--;
+
+                    SelectedCardQuantity--;
                 }
                 else
                 {
                     CurrentDeckLegends.Remove(existing);
+
+                    SelectedCardQuantity = 0;
                 }
             }
             else
@@ -383,10 +451,14 @@ namespace Cyberdeck.Desktop.ViewModels
                 if (existing.Quantity > 1)
                 {
                     existing.Quantity--;
+
+                    SelectedCardQuantity--;
                 }
                 else
                 {
                     CurrentDeckCards.Remove(existing);
+
+                    SelectedCardQuantity = 0;
                 }
             }
 
