@@ -194,6 +194,17 @@
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
                 </Expander>
+                
+                <!--Clear Filters-->
+                <Button Content="CLEAR"
+                        Command="{Binding ClearFiltersCommand}"
+                        Background="#FF4D6D"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        Height="25"
+                        Padding="2,2,2,2"
+                        Margin="10,5,0,0"
+                        VerticalAlignment="Top"/>
 
             </StackPanel>
         </Border>
@@ -558,17 +569,31 @@
                 <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
 
-            <TextBox Text="{Binding DeckNameText, UpdateSourceTrigger=Default}"
-                     Width="300"
-                     Height="20"
-                     VerticalAlignment="Center"
-                     HorizontalAlignment="Left"
-                     Background="#121922"
-                     Foreground="#E8EEF5"
-                     BorderBrush="#37D9FF"
-                     BorderThickness="1"
-                     Margin="5,0,0,5"
-                     Grid.Row="0"/>
+            <StackPanel Grid.Row="0"
+                        Orientation="Horizontal"
+                        Margin="5">
+                
+                <!--Deck Name-->
+                <TextBox Text="{Binding DeckNameText, UpdateSourceTrigger=Default}"
+                         Width="300"
+                         Height="20"
+                         Background="#121922"
+                         Foreground="#E8EEF5"
+                         BorderBrush="#37D9FF"
+                         BorderThickness="1"
+                         Margin="0,0,5,0"/>
+                
+                <!--Sort Button-->
+                <Button Content="SORT"
+                        Command="{Binding SortDeckCommand}"
+                        FontWeight="Bold"
+                        Background="#F7D354"
+                        Foreground="#0B0F14"
+                        Padding="2,2,2,2"
+                        Height="20"
+                        Margin="5,0,0,0"/>
+                
+            </StackPanel>
 
             <!--Legends-->
             <DataGrid ItemsSource="{Binding CurrentDeckLegends}"
