@@ -2,6 +2,20 @@
 
 All notable changes to Cyberdeck will be documented in this file.
 
+## [1.6.3] - 2026-08-04
+
+### Added
+* Decklist sort button
+* Clear filters button
+* The Heist
+* Bonnie and Clyde
+* Judy Alvarez - Braindance Maestro
+* Trust No One
+* Maelstrom Zealots
+
+### Changed
+* Filter options are now automatically loaded based on the card pool
+
 ## [1.6.2] - 2026-07-21
 
 ### Added
