@@ -1516,5 +1516,85 @@
     "cardText": "BLOCKER: (You may spend this Unit to redirect a rival Unit's attack to it instead.)\n\nThe first time this Unit is spent each turn, draw 1, then discard 1.",
     "rarity": "Common",
     "imagePath": "Assets/Cards/rita_stupid.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-091",
+    "name": "BONNIE AND CLYDE",
+    "color": "Red",
+    "type": "Program",
+    "cost": 3,
+    "power": 0,
+    "ram": 3,
+    "tags": [ "braindance" ],
+    "keywords": [],
+    "cardText": "Defeat a rival Unit with power 4 or less. You may defeat 2 instead if a Rival controls at least 2 Gigs more than you.",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/bonnie_clyde.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-092",
+    "name": "THE HEIST",
+    "color": "Yellow",
+    "type": "Program",
+    "cost": 2,
+    "power": 0,
+    "ram": 2,
+    "tags": [ "merc" ],
+    "keywords": [],
+    "cardText": "Trash 4. Add a Gear from among them to your hand. If that Gear's cost equals the value of a friendly Gig, you may play it for free instead.",
+    "rarity": "Uncommon",
+    "imagePath": "Assets/Cards/heist.png"
+  },
+
+  {
+    "sellable": false,
+    "cardId": "CORE-A-093",
+    "name": "MAELSTROM ZEALOTS",
+    "color": "Green",
+    "type": "Unit",
+    "cost": 4,
+    "power": 0,
+    "ram": 1,
+    "tags": [ "ganger", "maelstrom" ],
+    "keywords": [],
+    "cardText": "When this Unit loses a fight, defeat the opposing rival Unit.\n\n(Units with power 0 don't steal Gigs.)",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/maelstrom_zealots.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-094",
+    "name": "JUDY ALVAREZ",
+    "subName": "BRAINDANCE MAESTRO",
+    "color": "Blue",
+    "type": "Legend",
+    "power": 0,
+    "ram": 2,
+    "tags": [ "ganger", "mox", "techie" ],
+    "keywords": [],
+    "cardText": "When you play a BRAINDANCE Program, give a friendly Unit +1 power this turn.\n\nSPEND: Trash the top card of your deck. If it's a Program, you may add it to your hand.",
+    "rarity": "EpicRare",
+    "imagePath": "Assets/Cards/judy_maestro.png"
+  },
+
+  {
+    "sellable": true,
+    "cardId": "CORE-A-095",
+    "name": "TRUST NO ONE",
+    "color": "Blue",
+    "type": "Program",
+    "cost": 1,
+    "power": 0,
+    "ram": 1,
+    "tags": [ "braindance" ],
+    "keywords": [],
+    "cardText": "Decrease a Gig by up to 3. Then, if you control a min Gig, draw 1.",
+    "rarity": "Common",
+    "imagePath": "Assets/Cards/trust_no_one.png"
   }
 ]

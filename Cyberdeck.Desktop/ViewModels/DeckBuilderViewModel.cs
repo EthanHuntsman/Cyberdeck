@@ -75,95 +75,27 @@ namespace Cyberdeck.Desktop.ViewModels
 
             _cardService = cardService;
 
-            _ = LoadCardsAsync();
-            _ = LoadDecksAsync();
-
-            ColorFilters =
-            [
-            new(CardColor.Blue, ApplyFilters),
-            new(CardColor.Green, ApplyFilters),
-            new(CardColor.Red, ApplyFilters),
-            new(CardColor.Yellow, ApplyFilters)
-            ];
-
-            TypeFilters =
-            [
-                new(CardType.Gear, ApplyFilters),
-                new(CardType.Program, ApplyFilters),
-                new(CardType.Legend, ApplyFilters),
-                new(CardType.Unit, ApplyFilters)
-            ];
-
-            TagFilters =
-            [
-                new("arasaka", ApplyFilters),
-                new("aldecaldo", ApplyFilters),
-                new("ganger", ApplyFilters),
-                new("maelstrom", ApplyFilters),
-                new("merc", ApplyFilters),
-                new("corpo", ApplyFilters),
-                new("rocker", ApplyFilters),
-                new("samurai", ApplyFilters),
-                new("militech", ApplyFilters),
-                new("valentino", ApplyFilters),
-                new("drone", ApplyFilters)
-            ];
-
-            KeywordFilters =
-            [
-                new("go solo", ApplyFilters),
-                new("play", ApplyFilters),
-                new("quick", ApplyFilters),
-                new("blocker", ApplyFilters),
-                new("attack", ApplyFilters),
-                new("defeated", ApplyFilters)
-            ];
-
-            CostFilters =
-            [
-                new(1, ApplyFilters),
-                new(2, ApplyFilters),
-                new(3, ApplyFilters),
-                new(4, ApplyFilters),
-                new(5, ApplyFilters),
-                new(6, ApplyFilters),
-                new(7, ApplyFilters),
-                new(8, ApplyFilters),
-                new(9, ApplyFilters)
-            ];
-
-            PowerFilters =
-            [
-                new(0, ApplyFilters),
-                new(1, ApplyFilters),
-                new(2, ApplyFilters),
-                new(3, ApplyFilters),
-                new(4, ApplyFilters),
-                new(5, ApplyFilters),
-                new(6, ApplyFilters),
-                new(7, ApplyFilters),
-                new(8, ApplyFilters),
-                new(9, ApplyFilters)
-            ];
-
-            RamFilters =
-            [
-                new(0, ApplyFilters),
-                new(1, ApplyFilters),
-                new(2, ApplyFilters),
-                new(3, ApplyFilters),
-                new(4, ApplyFilters),
-                new(5, ApplyFilters),
-                new(6, ApplyFilters)
-            ];
-
-            SellableFilters =
-            [
-                new(true, ApplyFilters),
-                new(false, ApplyFilters)
-            ];
+            _ = InitializeAsync();
 
             NewDeck();
+        }
+
+        private async Task InitializeAsync()
+        {
+            try
+            {
+                await LoadCardsAsync();
+                await LoadDecksAsync();
+
+                LoadFilters();
+                NewDeck();
+                ApplyFilters();
+            }
+            catch (Exception ex)
+            {
+                // Log or display the initialization error.
+                Debug.WriteLine(ex);
+            }
         }
 
         partial void OnSelectedDeckCardChanged(DeckCard? value)
@@ -349,15 +281,107 @@ namespace Cyberdeck.Desktop.ViewModels
             
         }
 
+        [RelayCommand]
+        private void ClearFilters()
+        {
+            DeselectAll(ColorFilters);
+            DeselectAll(TypeFilters);
+            DeselectAll(CostFilters);
+            DeselectAll(PowerFilters);
+            DeselectAll(RamFilters);
+            DeselectAll(TagFilters);
+            DeselectAll(KeywordFilters);
+            DeselectAll(SellableFilters);
+
+            SearchText = string.Empty;
+
+            ApplyFilters();
+        }
+
+        private void LoadFilters()
+        {
+            PopulateFilters(
+                ColorFilters,
+                _allCards
+                    .Select(c => c.Color)
+                    .Distinct()
+                    .OrderBy(c => c));
+
+            PopulateFilters(
+                TypeFilters,
+                _allCards
+                    .Select(c => c.Type)
+                    .Distinct()
+                    .OrderBy(t => t));
+
+            PopulateFilters(
+                TagFilters,
+                _allCards
+                    .SelectMany(c => c.Tags ?? Enumerable.Empty<string>())
+                    .Where(t => !string.IsNullOrWhiteSpace(t))
+                    .Distinct(StringComparer.OrdinalIgnoreCase)
+                    .OrderBy(t => t));
+
+            PopulateFilters(
+                KeywordFilters,
+                _allCards
+                    .SelectMany(c => c.Keywords ?? Enumerable.Empty<string>())
+                    .Where(k => !string.IsNullOrWhiteSpace(k))
+                    .Distinct(StringComparer.OrdinalIgnoreCase)
+                    .OrderBy(k => k));
+
+            PopulateFilters(
+                CostFilters,
+                _allCards
+                    .Select(c => c.Cost)
+                    .Distinct()
+                    .OrderBy(c => c));
+
+            PopulateFilters(
+                PowerFilters,
+                _allCards
+                    .Select(c => c.Power)
+                    .Distinct()
+                    .OrderBy(p => p));
+
+            PopulateFilters(
+                RamFilters,
+                _allCards
+                    .Select(c => c.Ram)
+                    .Distinct()
+                    .OrderBy(r => r));
+
+            PopulateFilters(
+                SellableFilters,
+                _allCards
+                    .Select(c => c.Sellable)
+                    .Distinct()
+                    .OrderByDescending(s => s));
+        }
+
+        private static void DeselectAll<T>(IEnumerable<FilterOption<T>> filters)
+        {
+            foreach (var filter in filters)
+                filter.IsSelected = false;
+        }
+
+        private void PopulateFilters<T>(
+            ObservableCollection<FilterOption<T>> filters,
+            IEnumerable<T> values)
+        {
+            filters.Clear();
+
+            foreach (var value in values)
+            {
+                filters.Add(new FilterOption<T>(value, ApplyFilters));
+            }
+        }
+
         private async Task LoadCardsAsync()
         {
             var cards = await _cardService.GetAllCardsAsync();
 
             _allCards = cards.ToList();
-
-            TagFilters.Clear();
-
-            ApplyFilters();
         }
 
         [RelayCommand]
@@ -474,6 +498,36 @@ namespace Cyberdeck.Desktop.ViewModels
             deckCard.Quantity++;
 
             ValidateDeck();
+        }
+
+        [RelayCommand]
+        private void SortDeck()
+        {
+            var sortedLegends = CurrentDeckLegends
+                .OrderBy(c => c.Card.Color)
+                .ThenBy(c => c.Card.Name)
+                .ToList();
+
+            CurrentDeckLegends.Clear();
+
+            foreach (var legend in sortedLegends)
+            {
+                CurrentDeckLegends.Add(legend);
+            }
+
+            var sortedCards = CurrentDeckCards
+                .OrderBy(c => c.Card.Color)
+                .ThenBy(c => c.Card.Type)
+                .ThenByDescending(c => c.Quantity)
+                .ThenBy(c => c.Card.Name)
+                .ToList();
+
+            CurrentDeckCards.Clear();
+
+            foreach(var card in sortedCards)
+            {
+                CurrentDeckCards.Add(card);
+            }
         }
 
         [RelayCommand]
