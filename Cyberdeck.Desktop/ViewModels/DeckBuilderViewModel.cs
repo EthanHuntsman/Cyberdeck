@@ -55,6 +55,9 @@ namespace Cyberdeck.Desktop.ViewModels
         public ObservableCollection<FilterOption<int>> RamFilters { get; } = [];
         public ObservableCollection<FilterOption<bool>> SellableFilters { get; } = [];
 
+        [ObservableProperty]
+        private bool isLegendFilterEnabled = false;
+
 
         [ObservableProperty]
         private Deck? currentDeck;
@@ -264,6 +267,21 @@ namespace Cyberdeck.Desktop.ViewModels
                     selectedSellable.Contains(c.Sellable));
             }
 
+            if (IsLegendFilterEnabled)
+            {
+                var ramLimits = CurrentDeckLegends
+                    .GroupBy(dc => dc.Card.Color)
+                    .ToDictionary(
+                        group => group.Key,
+                        group => group.Sum(dc => dc.Card.Ram)
+                    );
+
+                filtered = filtered
+                    .Where(card =>
+                        ramLimits.TryGetValue(card.Color, out var ramLimit)
+                        && card.Ram <= ramLimit);
+            }
+
             var result = filtered
                 .OrderBy(c => c.Color)
                 .ThenBy(c => c.Type)
@@ -357,6 +375,13 @@ namespace Cyberdeck.Desktop.ViewModels
                     .Select(c => c.Sellable)
                     .Distinct()
                     .OrderByDescending(s => s));
+        }
+
+        [RelayCommand]
+        private void FilterByLegends()
+        {
+            IsLegendFilterEnabled = !IsLegendFilterEnabled;
+            ApplyFilters();
         }
 
         private static void DeselectAll<T>(IEnumerable<FilterOption<T>> filters)
